@@ -1,0 +1,17 @@
+{
+  "excluded_from_stopping_condition": true,
+  "runs": [
+    {
+      "id": "2026-10-02T02-10-13-803Z-optimization",
+      "reason": "Evidence filename rejected underscores. No completed iteration. Fixed saving before rerun."
+    },
+    {
+      "id": "2026-10-02T02-12-29-964Z-optimization",
+      "reason": "Found that disabled spatial candidates kept invisible chunk meshes attached. This added traversal work to subsequent baseline and candidate blocks. Cancelled before meeting stopping condition, detached inactive chunks, and restarted all trials. Preliminary indexing win was measured before these allocations."
+    },
+    {
+      "id": "2026-10-02T02-23-05-788Z-optimization",
+      "reason": "Calibration run exposed refresh/CPU-limited frame-rate variation despite a repeatable 14.5% native GPU reduction. The original acceptance policy considered CPU work wins but omitted GPU work wins. Added symmetric positive-95%-interval CPU/GPU acceptance, while retaining the overall-frame stopping criterion, and restarted a separate confirmation series. Not counted toward final stopping condition."
+    }
+  ]
+}

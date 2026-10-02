@@ -1,0 +1,41 @@
+{
+  "description": "Silent milestone montage, not a continuous screen recording. Original browser/renderer captures only. Display-size letterboxing; native originals preserved. No AI, interpolation, added sound or retouching.",
+  "video": "progress/development-timelapse-tour-restoration.mp4",
+  "frames": [
+    {
+      "source": "progress/captures/native-2026-10-01T19-18-51-888Z-tour-1.png",
+      "source_sha256": "7aea9a2f59f5d7f8fa1a92177f4fd31477f53a0373019421f53da3f71765a183",
+      "normalized": "progress/timelapse-frames/tour-restoration/000.png"
+    },
+    {
+      "source": "progress/captures/native-2026-10-01T19-19-00-972Z-tour-2.png",
+      "source_sha256": "a1d196921a764e0a4778f13d888293791ab269461aaf3805775a51ff297f3c02",
+      "normalized": "progress/timelapse-frames/tour-restoration/001.png"
+    },
+    {
+      "source": "progress/captures/31-restored-window-guitar-reveal.jpg",
+      "source_sha256": "b87a3fbf84c6126f4c64c3499b16e2bb02b9d770c614a1e257785992fde7ae4f",
+      "normalized": "progress/timelapse-frames/tour-restoration/002.png"
+    },
+    {
+      "source": "progress/captures/native-2026-10-01T19-58-46-088Z-tour-1.png",
+      "source_sha256": "be04dc5ab756353a3263c2d99458c25709d7a5b723c4b7952c95b8c4a5ea572d",
+      "normalized": "progress/timelapse-frames/tour-restoration/003.png"
+    },
+    {
+      "source": "progress/captures/native-2026-10-01T19-59-40-735Z-sofa.png",
+      "source_sha256": "6d060610d0d01dc3a0dc273115d6350807adec7ce33d495785ab10b104b3f436",
+      "normalized": "progress/timelapse-frames/tour-restoration/004.png"
+    },
+    {
+      "source": "progress/captures/32-tour-ended-music-still-playing.jpg",
+      "source_sha256": "3f8d00d946ae20160bfc9d5c982e666d692ea5224380e4a2f4412392264cff55",
+      "normalized": "progress/timelapse-frames/tour-restoration/005.png"
+    },
+    {
+      "source": "progress/captures/33-explicit-lane-and-selected-note.jpg",
+      "source_sha256": "2d2338e6e3676e6cb549cbbd8aedac988740b96ebdc2bd111826fe03c9853860",
+      "normalized": "progress/timelapse-frames/tour-restoration/006.png"
+    }
+  ]
+}

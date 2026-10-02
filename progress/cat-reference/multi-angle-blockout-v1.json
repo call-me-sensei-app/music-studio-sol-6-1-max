@@ -1,0 +1,20 @@
+{
+  "referenceAreaFraction": 0.26078993055555555,
+  "angles": [
+    {
+      "path": "progress/cat-reference/captures/blockout-front-v1.jpg",
+      "areaFraction": 0.2017502170138889,
+      "ratio": 0.7736119894817429,
+      "degenerate": false
+    },
+    {
+      "path": "progress/cat-reference/captures/blockout-right-v1.jpg",
+      "areaFraction": 0.2863888888888889,
+      "ratio": 1.0981593049961722,
+      "degenerate": false
+    }
+  ],
+  "degenerate": false,
+  "collapseRatio": 0.15,
+  "note": "deterministic; zero token; a flat-plane-faking-a-volume collapses in silhouette area when orbited"
+}

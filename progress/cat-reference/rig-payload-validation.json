@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "errors": [],
+  "warnings": [
+    "joints with no active vertex influence: CatHeadSocket"
+  ],
+  "summary": {
+    "jointCount": 14,
+    "vertexCount": 30888,
+    "maxInfluences": 4,
+    "activeVertexCountByJoint": [
+      30730,
+      12349,
+      8526,
+      5099,
+      11814,
+      8096,
+      4357,
+      10054,
+      6687,
+      4405,
+      9984,
+      7235,
+      4179,
+      0
+    ]
+  },
+  "evidenceBoundary": "structural payload only; runtime deformation and screenshot gates are separate"
+}

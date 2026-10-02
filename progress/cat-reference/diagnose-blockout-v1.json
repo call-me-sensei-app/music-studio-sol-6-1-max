@@ -1,0 +1,97 @@
+{
+  "passed": false,
+  "checks": {
+    "silhouetteIoU": 0.2139,
+    "aspectRatioDelta": 0.1823,
+    "scaleDelta": 0.1994,
+    "bilateralSymmetryError": 0.2655,
+    "colorDelta": {
+      "checked": 18,
+      "maxDeltaE": 58.88,
+      "perComponent": [
+        {
+          "componentId": null,
+          "deltaE": 58.88
+        },
+        {
+          "componentId": null,
+          "deltaE": 2.63
+        },
+        {
+          "componentId": null,
+          "deltaE": 2.63
+        },
+        {
+          "componentId": null,
+          "deltaE": 2.63
+        },
+        {
+          "componentId": null,
+          "deltaE": 13.07
+        },
+        {
+          "componentId": null,
+          "deltaE": 13.07
+        },
+        {
+          "componentId": null,
+          "deltaE": 26.83
+        },
+        {
+          "componentId": null,
+          "deltaE": 26.83
+        },
+        {
+          "componentId": null,
+          "deltaE": 2.63
+        },
+        {
+          "componentId": null,
+          "deltaE": 26.57
+        },
+        {
+          "componentId": null,
+          "deltaE": 19.55
+        },
+        {
+          "componentId": null,
+          "deltaE": 19.55
+        },
+        {
+          "componentId": null,
+          "deltaE": 26.83
+        },
+        {
+          "componentId": null,
+          "deltaE": 26.83
+        },
+        {
+          "componentId": null,
+          "deltaE": 26.83
+        },
+        {
+          "componentId": null,
+          "deltaE": 2.63
+        },
+        {
+          "componentId": null,
+          "deltaE": 2.63
+        },
+        {
+          "componentId": null,
+          "deltaE": 2.63
+        }
+      ],
+      "gated": false
+    }
+  },
+  "failures": [
+    "silhouette IoU 0.214 is below threshold 0.85",
+    "aspect-ratio delta 0.182 exceeds threshold 0.05",
+    "scale delta 0.199 exceeds threshold 0.08"
+  ],
+  "maskWarnings": [],
+  "renderHash": "f4e9f92811339580",
+  "passId": "blockout",
+  "mapStrippedRender": "progress/cat-reference/captures/blockout-hero-v1.jpg"
+}

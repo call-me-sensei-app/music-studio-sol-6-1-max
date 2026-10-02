@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-01T13:14:03.789Z",
+  "capture_mode": "native-renderer-canvas",
+  "reason": "one-minute-development-milestone",
+  "frames_since_boot": 68314,
+  "viewport": {
+    "width": 2294,
+    "height": 1353,
+    "dpr": 1
+  },
+  "backend": "WebGL2",
+  "mode": "cat-study-front-rest-toon",
+  "lighting": "neutral-studio",
+  "cat": {
+    "phase": "sill-idle",
+    "age": 0,
+    "visits": 0,
+    "eyesClosed": true
+  },
+  "guitar": -1,
+  "camera": {
+    "position": [
+      0,
+      1.0190000000000001,
+      0.8799999999999999
+    ],
+    "target": [
+      0,
+      0.8270000000000001,
+      -0.02
+    ],
+    "fov": 35,
+    "aspect": 1
+  },
+  "modelRevision": "v5-broad-face-tucked-paws-implicit-tail",
+  "simulationTime": 0,
+  "image": {
+    "width": 1353,
+    "height": 1353
+  },
+  "source_hash": "4821aabd63b44c3c2f1a23a0661a37f6104cd017e515f28c73faaf426be5b351",
+  "hud_included": false,
+  "native_renderer_export": true
+}

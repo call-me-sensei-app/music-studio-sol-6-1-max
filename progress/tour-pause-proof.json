@@ -1,0 +1,97 @@
+{
+  "audio": "running",
+  "audioRms": 0,
+  "audioStatus": {
+    "error": "Record worker timed out.",
+    "generationBackend": "cooperative-main",
+    "muted": false,
+    "pending": [],
+    "ready": true,
+    "record": "blue0",
+    "volume": 0.65,
+    "workerMessages": 0
+  },
+  "backend": "webgl",
+  "cameraPlay": {
+    "active": false,
+    "mode": "magic",
+    "output": "guitar-0",
+    "recording": false,
+    "selectedSource": "computer",
+    "source": "off"
+  },
+  "composer": {
+    "beat": 0,
+    "editing": {
+      "humming": null,
+      "lane": "Keyboard",
+      "selectedNote": null,
+      "track": 0
+    },
+    "lastStop": "manual",
+    "main": null,
+    "playing": false,
+    "supporting": 0
+  },
+  "curtainsClosed": 1.8009173234608688e-185,
+  "drawCalls": 541,
+  "fps": 34,
+  "guitars": {
+    "poses": [
+      "mounted",
+      "mounted",
+      "mounted"
+    ],
+    "selected": -1
+  },
+  "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+  "lighting": "golden",
+  "mode": "tour",
+  "performance": {
+    "duration": 22.206976744186047,
+    "instrument": "keyboard",
+    "notes": 56,
+    "playing": false,
+    "time": 0,
+    "title": "A softer kind of evening",
+    "underruns": 0
+  },
+  "position": 168,
+  "roomLights": {
+    "desk": true,
+    "fairy": true,
+    "monitor": true
+  },
+  "rpm": 0,
+  "software": false,
+  "sustain": false,
+  "tour": {
+    "active": true,
+    "chapter": 5,
+    "detail": "Slouched fabric · soft seams · a cozy seat",
+    "duration": 55,
+    "fov": 46.992690948684896,
+    "name": "Stay a little longer",
+    "paused": true,
+    "progress": 0.8695881818186139,
+    "time": 47.82735000002376
+  },
+  "tourGuitarStage": {
+    "active": false,
+    "name": null
+  },
+  "tourMusic": {
+    "active": true,
+    "guitar": true,
+    "keyboard": true,
+    "original": true,
+    "preparePhase": "ready",
+    "preparing": false,
+    "scheduled": 240,
+    "time": 168
+  },
+  "tracking": false,
+  "triangles": 1740245,
+  "voices": 0,
+  "windowOpen": true
+}

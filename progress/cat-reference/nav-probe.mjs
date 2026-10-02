@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import * as THREE from 'three/webgpu';
+import {makeRoom} from '../../src/room.js';import {personalizeRoom} from '../../src/props.js';import {openWindow} from '../../src/window.js';import {buildTurntable,buildKeyboard,buildGuitars} from '../../src/instruments.js';import {CollisionWorld} from '../../src/collision.js';import {FloorNavigation,CatLocomotion} from '../../src/cat-locomotion.js';
+// Actual authored geometry. Canvas painting is intentionally a no-op: this is NOT pixel evidence.
+const gradient={addColorStop(){}};
+function canvas(){const object={width:1,height:1},context=new Proxy({canvas:object,createLinearGradient:()=>gradient,createRadialGradient:()=>gradient,createPattern:()=>({}),measureText:text=>({width:String(text).length*8}),getImageData:()=>({data:new Uint8ClampedArray(object.width*object.height*4)})},{get:(a,k)=>k in a?a[k]:(()=>{}),set:(a,k,v)=>(a[k]=v,true)});object.getContext=()=>context;return object;}
+globalThis.document={createElement:()=>canvas()};globalThis.window={addEventListener(){}};
+const root=path.resolve(import.meta.dirname,'..'),room=makeRoom(new THREE.Scene());room.root.remove(room.deck);personalizeRoom(room);openWindow(room);buildTurntable(room.root);buildKeyboard(room.root);buildGuitars(room.root);room.root.scale.setScalar(.75);
+const world=new CollisionWorld(room.root),radius=Number(process.env.CAT_NAV_RADIUS)||.29,height=Number(process.env.CAT_NAV_HEIGHT)||.40,free=(x,z)=>world.floorFree(x,z,radius,height),nav=new FloorNavigation(free),motion=new CatLocomotion({home:{x:-4.015*.75,y:.910*.75,z:-.70*.75},free,height:(x,z)=>world.supportHeight(x,z),path:(a,b)=>nav.path(a,b)});
+
+const a={x:-2.001326905846863,z:-1.1376346514931175},b={x:-2.18,z:-.6};let ranges=[],on=false;for(let i=0;i<600;i++){let t=i/600,x=a.x+(b.x-a.x)*t,z=a.z+(b.z-a.z)*t;if(!free(x,z)){if(!on)ranges.push({from:t,x,z,top:world.supportHeight(x,z)});on=true}else{if(on)ranges.at(-1).to=t;on=false}}console.log({path:nav.path(a,b),ranges});

@@ -1,0 +1,55 @@
+{
+  "id": "2026-10-02T02-10-13-803Z-optimization",
+  "state": "failed",
+  "started_at": "2026-10-02T02:10:13.804Z",
+  "environment": {
+    "backend": "webgpu",
+    "hardware": "GPU",
+    "software": false,
+    "viewport": [
+      1280,
+      720
+    ],
+    "drawing_buffer": [
+      1280,
+      720
+    ],
+    "device_pixel_ratio": 1,
+    "render_pixel_ratio": 1,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "gpu_timestamp_supported": true,
+    "gpu_timestamp_enabled": true,
+    "shadow_size": [
+      2048,
+      2048
+    ],
+    "ao": {
+      "resolution_scale": 0.5,
+      "samples": 8
+    },
+    "antialias": "FXAA",
+    "audio": "Muted initialized worklet; visual score workload, not a DSP/audio-latency benchmark",
+    "camera_and_microphone": "off"
+  },
+  "method": {
+    "warmup_frames": 36,
+    "sample_frames_per_block": 80,
+    "order": "ABBA per view; equal-weighted six-view mean rAF interval",
+    "visual_gate": "Normalized RGB MAE <1%, global luminance SSIM loss <1%, pixels differing by >2/255 <1%; incremental and original-baseline comparison",
+    "motion": "Continuously simulated cloth worker and scene animation during timing. Frozen identical geometry/uniform/lighting state for lossless PNG comparison.",
+    "cpu": "performance.now() animation-callback work excluding asynchronous query resolution and PNG readback",
+    "gpu": "Native backend timestamp query, one resolved frame per eight frames when supported. No CPU-minus-frame proxy.",
+    "stop": "Five consecutive distinct candidate iterations with retained overall mean-frame improvement <5%. Rejected changes retain 0% improvement.",
+    "acceptance": "Image gate required. Keep clear frame improvements or >5% CPU reduction within a ±1% refresh-limited overall-frame band. Reject >1% measured frame regressions.",
+    "limitations": [
+      "No actual camera, microphone, phone or OS GPU power/thermal telemetry enabled.",
+      "Visual-only keyboard/guitar score workload; audio DSP throughput and full animated fly-through are not benchmarked.",
+      "rAF is display/presentation limited; CPU and GPU work overlap, and must not be summed.",
+      "Single local browser/device run; block-bootstrap intervals do not establish portable hardware performance."
+    ]
+  },
+  "iterations": [],
+  "consecutive_sub5": 0,
+  "error": "Performance evidence save failed: 400",
+  "source_hash": "28e71b0c126beba12b20aa63d8e0edf9be5923fac6ad74f075449bd932c4995a"
+}

@@ -1,0 +1,298 @@
+{
+  "numeric_only": true,
+  "no_pixel_evidence": true,
+  "created_at": "2026-10-01T13:11:57.578Z",
+  "source_hashes": {
+    "cat-locomotion.js": "df2ff9b09f7ef462f58c953dd14327a6803685146a795cf175337967ce36f26b",
+    "collision.js": "bced771d77aa0281078e81be352253bb8961a3c8075f4370daf7519e4cf47e3b",
+    "room.js": "c8e50c2f22bd74168a9d893982b9bf76f8c3a725048de2237fde3d7ef50224be",
+    "props.js": "df75b608a918385ceac0293b16d9a3924c62f4d31636706575263f5f27210773",
+    "instruments.js": "c02edcd07e2f8ee3a989d27ee0bd07815ff5ccb8686af8668fcd49a75eceba2e"
+  },
+  "nav_radius_m": 0.32,
+  "nav_height_m": 0.48,
+  "colliders": 1143,
+  "open_cells": 320,
+  "landing": {
+    "x": -2.1512499999999997,
+    "z": -0.5249999999999999,
+    "y": 0.015249999664723873
+  },
+  "phases": [
+    "stand-up",
+    "jump-down",
+    "landing",
+    "floor-idle",
+    "walking",
+    "pre-jump",
+    "jump-up",
+    "sill-settle",
+    "sill-idle"
+  ],
+  "return_trips": 1,
+  "simulation_seconds": 73.51666666666378,
+  "invalid_floor_positions": 0,
+  "final": {
+    "phase": "sill-idle",
+    "position": {
+      "x": -3.0112499999999995,
+      "y": 0.6825,
+      "z": -0.5249999999999999
+    },
+    "route": []
+  },
+  "events": [
+    {
+      "time": 0,
+      "phase": "stand-up",
+      "position": {
+        "x": -3.0112499999999995,
+        "y": 0.6825,
+        "z": -0.5249999999999999
+      },
+      "floor_stops": 0,
+      "returning": false,
+      "route_length": 0
+    },
+    {
+      "time": 1.467,
+      "phase": "jump-down",
+      "position": {
+        "x": -3.0112499999999995,
+        "y": 0.6825,
+        "z": -0.5249999999999999
+      },
+      "floor_stops": 0,
+      "returning": false,
+      "route_length": 0
+    },
+    {
+      "time": 1.967,
+      "phase": "landing",
+      "position": {
+        "x": -2.1512499999999997,
+        "z": -0.5249999999999999,
+        "y": 0.015249999664723873
+      },
+      "floor_stops": 0,
+      "returning": false,
+      "route_length": 0
+    },
+    {
+      "time": 2.767,
+      "phase": "floor-idle",
+      "position": {
+        "x": -2.1512499999999997,
+        "z": -0.5249999999999999,
+        "y": 0.015249999664723873
+      },
+      "floor_stops": 0,
+      "returning": false,
+      "route_length": 0
+    },
+    {
+      "time": 5.95,
+      "phase": "walking",
+      "position": {
+        "x": -2.1512499999999997,
+        "z": -0.5249999999999999,
+        "y": 0.015249999664723873
+      },
+      "floor_stops": 0,
+      "returning": false,
+      "route_length": 3
+    },
+    {
+      "time": 22.65,
+      "phase": "floor-idle",
+      "position": {
+        "x": 1.209958433457631,
+        "y": 0.015249999664723873,
+        "z": -1.0714566581982452
+      },
+      "floor_stops": 1,
+      "returning": false,
+      "route_length": 0
+    },
+    {
+      "time": 29.667,
+      "phase": "walking",
+      "position": {
+        "x": 1.209958433457631,
+        "y": 0.015249999664723873,
+        "z": -1.0714566581982452
+      },
+      "floor_stops": 1,
+      "returning": false,
+      "route_length": 2
+    },
+    {
+      "time": 34.15,
+      "phase": "floor-idle",
+      "position": {
+        "x": 1.9422544032997702,
+        "y": 0.015249999664723873,
+        "z": -1.597682805567832
+      },
+      "floor_stops": 2,
+      "returning": false,
+      "route_length": 0
+    },
+    {
+      "time": 38.217,
+      "phase": "walking",
+      "position": {
+        "x": 1.9422544032997702,
+        "y": 0.015249999664723873,
+        "z": -1.597682805567832
+      },
+      "floor_stops": 2,
+      "returning": false,
+      "route_length": 3
+    },
+    {
+      "time": 41.017,
+      "phase": "floor-idle",
+      "position": {
+        "x": 1.3179546445606767,
+        "y": 0.015249999664723873,
+        "z": -1.176702069233355
+      },
+      "floor_stops": 2,
+      "returning": false,
+      "route_length": 3
+    },
+    {
+      "time": 43.033,
+      "phase": "walking",
+      "position": {
+        "x": 1.3179546445606767,
+        "y": 0.015249999664723873,
+        "z": -1.176702069233355
+      },
+      "floor_stops": 2,
+      "returning": false,
+      "route_length": 3
+    },
+    {
+      "time": 43.117,
+      "phase": "floor-idle",
+      "position": {
+        "x": 1.3151441318440462,
+        "y": 0.015249999664723873,
+        "z": -1.1748068711392308
+      },
+      "floor_stops": 2,
+      "returning": false,
+      "route_length": 3
+    },
+    {
+      "time": 45.133,
+      "phase": "walking",
+      "position": {
+        "x": 1.3151441318440462,
+        "y": 0.015249999664723873,
+        "z": -1.1748068711392308
+      },
+      "floor_stops": 2,
+      "returning": false,
+      "route_length": 4
+    },
+    {
+      "time": 45.183,
+      "phase": "floor-idle",
+      "position": {
+        "x": 1.31445877644222,
+        "y": 0.015249999664723873,
+        "z": -1.1743447190757823
+      },
+      "floor_stops": 2,
+      "returning": false,
+      "route_length": 4
+    },
+    {
+      "time": 47.2,
+      "phase": "walking",
+      "position": {
+        "x": 1.31445877644222,
+        "y": 0.015249999664723873,
+        "z": -1.1743447190757823
+      },
+      "floor_stops": 2,
+      "returning": false,
+      "route_length": 2
+    },
+    {
+      "time": 51.5,
+      "phase": "floor-idle",
+      "position": {
+        "x": 1.902063044208131,
+        "y": 0.015249999664723873,
+        "z": -1.2198119954531137
+      },
+      "floor_stops": 3,
+      "returning": false,
+      "route_length": 0
+    },
+    {
+      "time": 56.183,
+      "phase": "walking",
+      "position": {
+        "x": 1.902063044208131,
+        "y": 0.015249999664723873,
+        "z": -1.2198119954531137
+      },
+      "floor_stops": 3,
+      "returning": true,
+      "route_length": 3
+    },
+    {
+      "time": 70.167,
+      "phase": "pre-jump",
+      "position": {
+        "x": -2.1512499999999997,
+        "y": 0.015249999664723873,
+        "z": -0.5249999999999999
+      },
+      "floor_stops": 3,
+      "returning": true,
+      "route_length": 0
+    },
+    {
+      "time": 71.117,
+      "phase": "jump-up",
+      "position": {
+        "x": -2.1512499999999997,
+        "y": 0.015249999664723873,
+        "z": -0.5249999999999999
+      },
+      "floor_stops": 3,
+      "returning": true,
+      "route_length": 0
+    },
+    {
+      "time": 71.7,
+      "phase": "sill-settle",
+      "position": {
+        "x": -3.0112499999999995,
+        "y": 0.6825,
+        "z": -0.5249999999999999
+      },
+      "floor_stops": 3,
+      "returning": true,
+      "route_length": 0
+    },
+    {
+      "time": 73.517,
+      "phase": "sill-idle",
+      "position": {
+        "x": -3.0112499999999995,
+        "y": 0.6825,
+        "z": -0.5249999999999999
+      },
+      "floor_stops": 3,
+      "returning": true,
+      "route_length": 0
+    }
+  ]
+}

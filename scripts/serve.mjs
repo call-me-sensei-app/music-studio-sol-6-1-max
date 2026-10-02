@@ -1,0 +1,8 @@
+import http from 'node:http';import https from 'node:https';import fs from 'node:fs';import path from 'node:path';
+import {phoneBridge} from './phone-bridge.mjs';
+const root=path.resolve(import.meta.dirname,'../dist'),bridge=phoneBridge(),host=process.env.AFTERLIGHT_HOST||'127.0.0.1',port=Number(process.env.PORT)||5176;
+const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.png':'image/png','.jpg':'image/jpeg','.wasm':'application/wasm','.json':'application/json','.task':'application/octet-stream'};
+function staticFile(req,res){let requested;try{requested=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.statusCode=400;res.end('Invalid URL');return;}const file=path.resolve(root,'.'+(requested==='/'?'/index.html':requested));if(!file.startsWith(root+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()){res.statusCode=404;res.end('Not found');return;}res.setHeader('Content-Type',mime[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(res);}
+const handler=(req,res)=>{res.setHeader('Cross-Origin-Opener-Policy','same-origin');res.setHeader('Cross-Origin-Embedder-Policy','require-corp');bridge(req,res,()=>staticFile(req,res));};
+const tls=process.env.AFTERLIGHT_TLS_KEY&&process.env.AFTERLIGHT_TLS_CERT,server=tls?https.createServer({key:fs.readFileSync(process.env.AFTERLIGHT_TLS_KEY),cert:fs.readFileSync(process.env.AFTERLIGHT_TLS_CERT)},handler):http.createServer(handler);
+server.listen(port,host,()=>{console.log(`Afterlight: ${tls?'https':'http'}://${host}:${port}`);if(!tls)console.log('Standalone phone camera requires trusted HTTPS. Local laptop camera can use loopback.');});

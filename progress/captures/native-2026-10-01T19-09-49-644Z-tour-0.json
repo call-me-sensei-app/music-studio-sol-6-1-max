@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-01T19:09:49.644Z",
+  "capture_mode": "native-renderer-canvas",
+  "reason": "one-minute-development-milestone",
+  "frames_since_boot": 2891,
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "dpr": 1
+  },
+  "backend": "webgl",
+  "mode": "tour-0",
+  "lighting": "golden",
+  "guitar": -1,
+  "draw_calls": 713,
+  "audio": {
+    "state": "running",
+    "ready": true,
+    "muted": false,
+    "master_rms": 0,
+    "record": "blue0",
+    "generation_backend": "cooperative-main"
+  },
+  "ensemble": {
+    "playing": false,
+    "main": null,
+    "supporting": 0
+  },
+  "tour_music": {
+    "active": false,
+    "preparing": true,
+    "guitar": false,
+    "keyboard": false,
+    "scheduled": 0,
+    "time": 0,
+    "original": true
+  },
+  "image": {
+    "width": 1280,
+    "height": 720
+  },
+  "source_hash": "9bc043c8c4d7e9ae63f9fe02b1366b7a10ae07a7d90ea86d82df757fc50544ff",
+  "hud_included": false,
+  "native_renderer_export": true
+}

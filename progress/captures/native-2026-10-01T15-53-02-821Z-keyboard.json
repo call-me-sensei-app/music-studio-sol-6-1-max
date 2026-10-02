@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-01T15:53:02.821Z",
+  "capture_mode": "native-renderer-canvas",
+  "reason": "settled-view-change",
+  "frames_since_boot": 8541,
+  "viewport": {
+    "width": 1433,
+    "height": 1342,
+    "dpr": 1
+  },
+  "backend": "webgpu",
+  "mode": "keyboard",
+  "lighting": "golden",
+  "guitar": -1,
+  "draw_calls": 672,
+  "image": {
+    "width": 1433,
+    "height": 1342
+  },
+  "source_hash": "c0a7d1df0bfd813c42e9e9ec258cc3eca73ee7c6395633f2be31a8cbaa3eca2c",
+  "hud_included": false,
+  "native_renderer_export": true
+}

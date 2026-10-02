@@ -1,0 +1,249 @@
+{
+  "sourceImage": "progress/cat-reference/user-cat-reference.png",
+  "detailInventory": {
+    "scanMethod": "component-zones",
+    "targetMinDetails": 10,
+    "details": [
+      {
+        "id": "head-proportion",
+        "kind": "contour",
+        "description": "oversized broad rounded cranium",
+        "region": {
+          "x": 0.16,
+          "y": 0.12,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "meso",
+        "affects": "silhouette",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "head.head-proportion"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.95
+      },
+      {
+        "id": "ear-attachment",
+        "kind": "contour",
+        "description": "ear bases embed in skull",
+        "region": {
+          "x": 0.16,
+          "y": 0.12,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "meso",
+        "affects": "silhouette",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "ear-left.ear-attachment"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.95
+      },
+      {
+        "id": "tail-curl",
+        "kind": "contour",
+        "description": "oversized upward curved tail",
+        "region": {
+          "x": 0.16,
+          "y": 0.12,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "meso",
+        "affects": "silhouette",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "tail.tail-curl"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.85
+      },
+      {
+        "id": "closed-eyes",
+        "kind": "linework",
+        "description": "paired small closed smiling eyes",
+        "region": {
+          "x": 0.16,
+          "y": 0.12,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "micro",
+        "affects": "color",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "eyes.closed-eyes"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.95
+      },
+      {
+        "id": "mouth-smile",
+        "kind": "linework",
+        "description": "tiny understated mouth",
+        "region": {
+          "x": 0.16,
+          "y": 0.12,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "micro",
+        "affects": "color",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "smile.mouth-smile"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.95
+      },
+      {
+        "id": "forehead-mark",
+        "kind": "stain",
+        "description": "tapered tan crown stripe",
+        "region": {
+          "x": 0.16,
+          "y": 0.12,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "micro",
+        "affects": "color",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "head.forehead-mark"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.95
+      },
+      {
+        "id": "ear-color",
+        "kind": "stain",
+        "description": "tan outer ear and salmon interior",
+        "region": {
+          "x": 0.55,
+          "y": 0.48,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "micro",
+        "affects": "color",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "ear-left.ear-color"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.95
+      },
+      {
+        "id": "flank-patch",
+        "kind": "stain",
+        "description": "muted rose-brown flank region",
+        "region": {
+          "x": 0.55,
+          "y": 0.48,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "micro",
+        "affects": "color",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "body.flank-patch"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.85
+      },
+      {
+        "id": "tail-band",
+        "kind": "stain",
+        "description": "muted brown base and cream distal tail",
+        "region": {
+          "x": 0.55,
+          "y": 0.48,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "micro",
+        "affects": "color",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "tail.tail-band"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.85
+      },
+      {
+        "id": "paws",
+        "kind": "contour",
+        "description": "compressed rounded four paws",
+        "region": {
+          "x": 0.55,
+          "y": 0.48,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "meso",
+        "affects": "silhouette",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "body.paws"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.85
+      },
+      {
+        "id": "whiskers",
+        "kind": "linework",
+        "description": "three fine lines per cheek",
+        "region": {
+          "x": 0.55,
+          "y": 0.48,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "micro",
+        "affects": "color",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "whiskers.whiskers"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.95
+      },
+      {
+        "id": "toes",
+        "kind": "linework",
+        "description": "paired toe creases",
+        "region": {
+          "x": 0.55,
+          "y": 0.48,
+          "width": 0.58,
+          "height": 0.74,
+          "units": "normalized"
+        },
+        "scale": "micro",
+        "affects": "color",
+        "mapsTo": {
+          "type": "component.localFeatures",
+          "ref": "toes.toes"
+        },
+        "evidenceRef": "user-cat-reference.png",
+        "confidence": 0.95
+      }
+    ]
+  }
+}

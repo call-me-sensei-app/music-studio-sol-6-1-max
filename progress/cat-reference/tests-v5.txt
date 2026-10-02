@@ -1,0 +1,20 @@
+✔ jump lands exactly, with gravity and a descending arrival (1.110417ms)
+✔ navigation does not cut diagonally through an obstacle corner (12.370333ms)
+✔ cat completes an excursion and returns to the sill without invalid coordinates (31.822584ms)
+✔ 3D paw IK preserves segment lengths and never emits invalid rotations (2.55075ms)
+✔ reference cat ears remain embedded across the complete ear flick range (5.328916ms)
+✔ reference cat keeps closed lid curves in every expression, never painting an iris (0.806ms)
+✔ cat payload can be validated before any skeleton is bound (204.958125ms)
+✔ world-space gait plants do not slide or float under room scale and turns (288.8435ms)
+✔ continuous cat skin has four normalized influences and four articulated legs (236.836708ms)
+✔ cat yawns intermittently and never exceeds neck or jaw limits (23.249416ms)
+✔ camera tracking is smoothed, conditional and frame-rate independent (0.467375ms)
+✔ reference cat never opens its eyes when attentive, moving its head or yawning (13.719375ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1428.607833

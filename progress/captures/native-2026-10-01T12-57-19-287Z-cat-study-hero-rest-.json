@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-01T12:57:19.287Z",
+  "capture_mode": "native-renderer-canvas",
+  "reason": "settled-view-change",
+  "frames_since_boot": 5442,
+  "viewport": {
+    "width": 2294,
+    "height": 1353,
+    "dpr": 1
+  },
+  "backend": "WebGL2",
+  "mode": "cat-study-hero-rest-toon",
+  "lighting": "neutral-studio",
+  "cat": {
+    "phase": "sill-idle",
+    "age": 0,
+    "visits": 0,
+    "eyesClosed": true
+  },
+  "guitar": -1,
+  "camera": {
+    "position": [
+      0.3984,
+      0.9998,
+      0.5559999999999999
+    ],
+    "target": [
+      0,
+      0.8270000000000001,
+      -0.02
+    ],
+    "fov": 35,
+    "aspect": 1
+  },
+  "modelRevision": "v4-kitten-links-permanently-closed-eyes",
+  "simulationTime": 0,
+  "image": {
+    "width": 1353,
+    "height": 1353
+  },
+  "source_hash": "5f1454fbd34b1ee8bb4a320c36e6b25875eae8b0da8adde1c6fff948d4da4a94",
+  "hud_included": false,
+  "native_renderer_export": true
+}

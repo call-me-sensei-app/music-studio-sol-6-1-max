@@ -1,0 +1,96 @@
+{
+  "passed": false,
+  "checks": {
+    "silhouetteIoU": 0.1696,
+    "aspectRatioDelta": 0.0211,
+    "scaleDelta": 0.4656,
+    "bilateralSymmetryError": 0.151,
+    "colorDelta": {
+      "checked": 18,
+      "maxDeltaE": 61.72,
+      "perComponent": [
+        {
+          "componentId": null,
+          "deltaE": 61.72
+        },
+        {
+          "componentId": null,
+          "deltaE": 14.88
+        },
+        {
+          "componentId": null,
+          "deltaE": 14.88
+        },
+        {
+          "componentId": null,
+          "deltaE": 14.88
+        },
+        {
+          "componentId": null,
+          "deltaE": 6.75
+        },
+        {
+          "componentId": null,
+          "deltaE": 6.75
+        },
+        {
+          "componentId": null,
+          "deltaE": 12.85
+        },
+        {
+          "componentId": null,
+          "deltaE": 12.85
+        },
+        {
+          "componentId": null,
+          "deltaE": 14.88
+        },
+        {
+          "componentId": null,
+          "deltaE": 25.22
+        },
+        {
+          "componentId": null,
+          "deltaE": 10.85
+        },
+        {
+          "componentId": null,
+          "deltaE": 10.85
+        },
+        {
+          "componentId": null,
+          "deltaE": 12.85
+        },
+        {
+          "componentId": null,
+          "deltaE": 12.85
+        },
+        {
+          "componentId": null,
+          "deltaE": 12.85
+        },
+        {
+          "componentId": null,
+          "deltaE": 14.88
+        },
+        {
+          "componentId": null,
+          "deltaE": 14.88
+        },
+        {
+          "componentId": null,
+          "deltaE": 14.88
+        }
+      ],
+      "gated": false
+    }
+  },
+  "failures": [
+    "silhouette IoU 0.170 is below threshold 0.85",
+    "scale delta 0.466 exceeds threshold 0.08",
+    "blockout requires --map-stripped-render evidence"
+  ],
+  "maskWarnings": [],
+  "renderHash": "45fc5d9a8fac0034",
+  "passId": "blockout"
+}

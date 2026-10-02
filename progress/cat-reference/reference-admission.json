@@ -1,0 +1,14 @@
+{
+  "admitted": true,
+  "reasons": [],
+  "provenance": {
+    "viewpoint": "rest-three-quarter",
+    "sourcePath": "/Users/juminoz/CascadeProjects/sol-6.1-benchmark-2/progress/cat-reference/user-cat-reference.png",
+    "width": 360,
+    "height": 360,
+    "foregroundCoverage": 0.3166,
+    "largestComponentFraction": 0.968,
+    "pHash": 17920624270872268962,
+    "duplicateOfHash": null
+  }
+}

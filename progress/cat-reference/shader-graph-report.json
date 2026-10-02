@@ -1,0 +1,306 @@
+{
+  "numeric_only": true,
+  "no_gpu_or_pixel_proof": true,
+  "results": [
+    {
+      "backend": "WGSL",
+      "slots": [
+        {
+          "name": "",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 106.82195799999954
+        },
+        {
+          "name": "",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 65.15412500000002
+        },
+        {
+          "name": "",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 53.793290999999954
+        },
+        {
+          "name": "",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 56.276584000000184
+        },
+        {
+          "name": "",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 60.43299999999999
+        },
+        {
+          "name": "",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 82.32774999999947
+        },
+        {
+          "name": "",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 51.85387499999979
+        },
+        {
+          "name": "",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 48.53008299999965
+        },
+        {
+          "name": "ContinuousFelineSkull",
+          "vertex": 4623,
+          "fragment": 67032,
+          "ms": 46.311375000000226
+        },
+        {
+          "name": "OrganicLeftEar",
+          "vertex": 4632,
+          "fragment": 67275,
+          "ms": 34.015582999999424
+        },
+        {
+          "name": "OrganicRightEar",
+          "vertex": 4632,
+          "fragment": 67275,
+          "ms": 49.3809169999995
+        },
+        {
+          "name": "LeftEye",
+          "vertex": 4715,
+          "fragment": 69108,
+          "ms": 35.45141700000022
+        },
+        {
+          "name": "RightEye",
+          "vertex": 4715,
+          "fragment": 69108,
+          "ms": 41.11504199999945
+        },
+        {
+          "name": "SmallTriangularNose",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 41.99354200000016
+        },
+        {
+          "name": "LowerJawSkin",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 50.332790999999816
+        },
+        {
+          "name": "ClosedMouthLine",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 99.5595000000003
+        },
+        {
+          "name": "LeftWhisker0",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 39.37858299999971
+        },
+        {
+          "name": "LeftWhisker1",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 51.087250000000495
+        },
+        {
+          "name": "LeftWhisker2",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 38.81108399999994
+        },
+        {
+          "name": "RightWhisker0",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 29.846334000000752
+        },
+        {
+          "name": "RightWhisker1",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 61.595125000000735
+        },
+        {
+          "name": "RightWhisker2",
+          "vertex": 4496,
+          "fragment": 66967,
+          "ms": 43.09362499999952
+        },
+        {
+          "name": "ThickCurledTail",
+          "vertex": 4623,
+          "fragment": 67032,
+          "ms": 35.734167000000525
+        },
+        {
+          "name": "ContinuousRiggedFeline",
+          "vertex": 5740,
+          "fragment": 67118,
+          "ms": 38.45258400000057
+        }
+      ],
+      "errors": []
+    },
+    {
+      "backend": "GLSL",
+      "slots": [
+        {
+          "name": "",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 84.82125000000087
+        },
+        {
+          "name": "",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 59.490874999999505
+        },
+        {
+          "name": "",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 58.41437499999847
+        },
+        {
+          "name": "",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 54.60712499999863
+        },
+        {
+          "name": "",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 129.1062920000004
+        },
+        {
+          "name": "",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 66.93362500000148
+        },
+        {
+          "name": "",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 63.551666999999725
+        },
+        {
+          "name": "",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 70.41799999999967
+        },
+        {
+          "name": "ContinuousFelineSkull",
+          "vertex": 4917,
+          "fragment": 62374,
+          "ms": 136.7998749999988
+        },
+        {
+          "name": "OrganicLeftEar",
+          "vertex": 4942,
+          "fragment": 62775,
+          "ms": 64.72112500000003
+        },
+        {
+          "name": "OrganicRightEar",
+          "vertex": 4942,
+          "fragment": 62775,
+          "ms": 53.67179100000067
+        },
+        {
+          "name": "LeftEye",
+          "vertex": 5034,
+          "fragment": 64620,
+          "ms": 53.483290999998644
+        },
+        {
+          "name": "RightEye",
+          "vertex": 5034,
+          "fragment": 64620,
+          "ms": 54.83445799999936
+        },
+        {
+          "name": "SmallTriangularNose",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 163.07658300000003
+        },
+        {
+          "name": "LowerJawSkin",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 62.13387500000135
+        },
+        {
+          "name": "ClosedMouthLine",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 90.8836250000004
+        },
+        {
+          "name": "LeftWhisker0",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 171.26900000000023
+        },
+        {
+          "name": "LeftWhisker1",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 71.89237499999945
+        },
+        {
+          "name": "LeftWhisker2",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 190.93641699999898
+        },
+        {
+          "name": "RightWhisker0",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 183.2156670000004
+        },
+        {
+          "name": "RightWhisker1",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 85.32841600000029
+        },
+        {
+          "name": "RightWhisker2",
+          "vertex": 4820,
+          "fragment": 62329,
+          "ms": 125.16279200000099
+        },
+        {
+          "name": "ThickCurledTail",
+          "vertex": 4917,
+          "fragment": 62374,
+          "ms": 100.2582910000001
+        },
+        {
+          "name": "ContinuousRiggedFeline",
+          "vertex": 8657,
+          "fragment": 62606,
+          "ms": 47.23612499999945
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

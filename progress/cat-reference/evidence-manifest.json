@@ -1,0 +1,63 @@
+{
+  "sourceFiles": {
+    "src/cat.js": "b1bb17007eacd6661c69aa9c1f1aee2309223891ceafb13e140dc78b7648dc3d",
+    "src/cat-rig.js": "87aac36c504bddebb19984cc87a8e0e37828c0b3e1d6860e669f8ab8ea11c47c",
+    "src/cat-locomotion.js": "df2ff9b09f7ef462f58c953dd14327a6803685146a795cf175337967ce36f26b",
+    "src/cat-behavior.js": "1c1428821f531d3f40d887ca639ce4c5d16e381c3e949ee214de487e5186dd84",
+    "src/cat-study.js": "d79dd9099f24e12508c9c5517eac196a203f781c15c3ac2b905b9720309afc48",
+    "cat-study.html": "eb4929b32a9cc730818b3ec68a9a07373c2e1ca8b5615a4fb98bf5a5a00bb0af",
+    "tests/cat-rig.test.mjs": "e63d572cc4e64a1b1f3721d537a83a9521c298d1ca5e7814d5b6770602c5210b",
+    "tests/cat-locomotion.test.mjs": "0bb15be3d9eccbccd6637921f8bf6ba11977d5bcd624d0ba63e8e36032cd2bbd",
+    "tests/cat.test.mjs": "d94941055de398877750b757f502b64d14fe203d5d6661c70146e5eac81cd57a"
+  },
+  "reference": {
+    "original": "user-cat-reference.png",
+    "role": "authoritative original 360px illustration",
+    "generated": "inferred-multiview-v1.png",
+    "generatedRole": "User-authorized inferred design guidance only, not original ground truth or runtime asset"
+  },
+  "captures": [
+    {
+      "path": "/Users/juminoz/CascadeProjects/sol-6.1-benchmark-2/progress/cat-reference/captures/blockout-front-v1.jpg",
+      "sha256": "237ad91582347faadff62965644544363bae937b02b85358e1de0e65365e9f2d",
+      "role": "actual CUA browser screenshot",
+      "approved": false,
+      "notes": "v1/v2 rejected; v3 verifies shorter links on WebGL, not latest home orientation or approved likeness. reference-beauty-v2.jpg has no rendered frame and is not visual evidence."
+    },
+    {
+      "path": "/Users/juminoz/CascadeProjects/sol-6.1-benchmark-2/progress/cat-reference/captures/blockout-hero-v1.jpg",
+      "sha256": "f4e9f928113395802b4d304d7873de01278f52e4279e656fe94b959e6adfdb3d",
+      "role": "actual CUA browser screenshot",
+      "approved": false,
+      "notes": "v1/v2 rejected; v3 verifies shorter links on WebGL, not latest home orientation or approved likeness. reference-beauty-v2.jpg has no rendered frame and is not visual evidence."
+    },
+    {
+      "path": "/Users/juminoz/CascadeProjects/sol-6.1-benchmark-2/progress/cat-reference/captures/blockout-right-v1.jpg",
+      "sha256": "a6fa483d9caf2c18e2d1f5113afcefcc256a5477722d3004ae755d626625e91e",
+      "role": "actual CUA browser screenshot",
+      "approved": false,
+      "notes": "v1/v2 rejected; v3 verifies shorter links on WebGL, not latest home orientation or approved likeness. reference-beauty-v2.jpg has no rendered frame and is not visual evidence."
+    },
+    {
+      "path": "/Users/juminoz/CascadeProjects/sol-6.1-benchmark-2/progress/cat-reference/captures/compact-kitten-v3-webgl.jpg",
+      "sha256": "5f5c616160988260a0050176713c09b4fefcf18ac1485a494d372a7d0ab80d79",
+      "role": "actual CUA browser screenshot",
+      "approved": false,
+      "notes": "v1/v2 rejected; v3 verifies shorter links on WebGL, not latest home orientation or approved likeness. reference-beauty-v2.jpg has no rendered frame and is not visual evidence."
+    },
+    {
+      "path": "/Users/juminoz/CascadeProjects/sol-6.1-benchmark-2/progress/cat-reference/captures/reference-beauty-v2-real.jpg",
+      "sha256": "a4cd1ec582a8b2f23516086489f8604d1a48515dcf63e60566007959771ac429",
+      "role": "actual CUA browser screenshot",
+      "approved": false,
+      "notes": "v1/v2 rejected; v3 verifies shorter links on WebGL, not latest home orientation or approved likeness. reference-beauty-v2.jpg has no rendered frame and is not visual evidence."
+    },
+    {
+      "path": "/Users/juminoz/CascadeProjects/sol-6.1-benchmark-2/progress/cat-reference/captures/reference-beauty-v2.jpg",
+      "sha256": "78a07f925753411aa1cc4d1e00471596e7d464f38fd2c1eee9b044da3103be31",
+      "role": "actual CUA browser screenshot",
+      "approved": false,
+      "notes": "v1/v2 rejected; v3 verifies shorter links on WebGL, not latest home orientation or approved likeness. reference-beauty-v2.jpg has no rendered frame and is not visual evidence."
+    }
+  ]
+}

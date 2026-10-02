@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "status": "stopped",
+  "profile": "character",
+  "currentStep": "stopped",
+  "currentPass": "blockout",
+  "checklist": [
+    {
+      "id": "image-analysis",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/analysis.md"
+      ],
+      "reason": "",
+      "command": "Read grimoire/intake/image_analysis.md and analyze {reference}"
+    },
+    {
+      "id": "reference-suitability",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/analysis.md"
+      ],
+      "reason": "",
+      "command": "Read grimoire/intake/validation_rubric.md and record a pass, conditional, or reject verdict for {reference}"
+    },
+    {
+      "id": "reference-admission",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/reference-admission.json"
+      ],
+      "reason": "",
+      "command": "python3 forge/stage1_intake/check_reference_admission.py {reference}"
+    },
+    {
+      "id": "character-contract-read",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/analysis.md"
+      ],
+      "reason": "",
+      "command": "Read grimoire/character/reconstruction.md and grimoire/character/likeness_maximization.md completely"
+    },
+    {
+      "id": "character-landmarks",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/anatomy.json"
+      ],
+      "reason": "",
+      "command": "python3 forge/stage1_intake/extract_landmarks.py {reference} --out anatomy.json --overlay landmarks.png"
+    },
+    {
+      "id": "local-spec-search",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/assessment.json"
+      ],
+      "reason": "",
+      "command": "Run the local evidence search before authoring the assessment"
+    },
+    {
+      "id": "pre-spec-assessment",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/assessment.json"
+      ],
+      "reason": "",
+      "command": "python3 forge/stage2_spec/new_pre_spec_assessment.py \"<name>\" --image {reference} --out assessment.json"
+    },
+    {
+      "id": "detail-inventory",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/detail-inventory.json"
+      ],
+      "reason": "",
+      "command": "python3 forge/stage1_intake/build_detail_inventory.py {reference} --mode grid-3x3 --out-dir detail-inventory --out di.json"
+    },
+    {
+      "id": "projection-route",
+      "scope": "setup",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "User from-scratch geometry/art requirement; original is 360px illustration. Authored coat masks instead of projected pixels.",
+      "command": "Record whether projection is required; if required run solve_camera_pose.py, delight_albedo.py, and bake_projected_texture.py, otherwise skip with a reason"
+    },
+    {
+      "id": "spec-authoring",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/character-sculpt-spec.json"
+      ],
+      "reason": "",
+      "command": "python3 forge/stage2_spec/new_sculpt_spec.py \"<name>\" --image {reference} --assessment assessment.json --out object-sculpt-spec.json"
+    },
+    {
+      "id": "material-evidence",
+      "scope": "setup",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "2D stylized illustration has no measurable PBR channels. Explicit applicability false in spec and analysis, no maps or recovery claimed.",
+      "command": "python3 forge/stage1_intake/material_region_analysis.py --manifest material-regions.json --out-dir material-evidence --out material-analysis.json (single-crop route: analyze_texture.py + extract_pbr_evidence.py per verified crop; otherwise skip with a reason)"
+    },
+    {
+      "id": "material-spec-wiring",
+      "scope": "setup",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "2D stylized illustration has no measurable PBR channels. Explicit applicability false in spec and analysis, no maps or recovery claimed.",
+      "command": "python3 forge/stage2_spec/apply_material_analysis.py {spec} material-analysis.json --in-place"
+    },
+    {
+      "id": "strict-validation",
+      "scope": "setup",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/strict-validation.txt"
+      ],
+      "reason": "",
+      "command": "python3 forge/stage2_spec/validate_sculpt_spec.py {spec} --strict-quality"
+    },
+    {
+      "id": "build-current-pass",
+      "scope": "pass",
+      "status": "done",
+      "evidence": [
+        "src/cat.js",
+        "src/cat-rig.js",
+        "progress/cat-reference/revision-v5-plan.md"
+      ],
+      "reason": "",
+      "command": "python3 forge/stage3_build/generate_threejs_factory.py {spec} --out src/createObjectModel.ts --pass-id {pass_id}"
+    },
+    {
+      "id": "render-capture",
+      "scope": "pass",
+      "status": "done",
+      "evidence": [
+        "progress/cat-reference/captures/v5-hero-native.png",
+        "progress/cat-reference/captures/v5-front-native.png"
+      ],
+      "reason": "",
+      "command": "Render {pass_id} and capture the fixed review view plus meaningful orbit views"
+    },
+    {
+      "id": "review-contract-read",
+      "scope": "pass",
+      "status": "done",
+      "evidence": [
+        "/Users/juminoz/.codex/skills/img2threejs/grimoire/review/gates_reference.md",
+        "/Users/juminoz/.codex/skills/img2threejs/grimoire/review/self_correction.md"
+      ],
+      "reason": "",
+      "command": "Read grimoire/review/gates_reference.md and grimoire/review/self_correction.md completely"
+    },
+    {
+      "id": "tier1-diagnostics",
+      "scope": "pass",
+      "status": "pending",
+      "evidence": [],
+      "reason": "",
+      "command": "python3 forge/stage4_review/diagnose_render.py --reference {reference} --render <shot> --spec {spec} --pass-id {pass_id} --in-place"
+    },
+    {
+      "id": "multi-angle-review",
+      "scope": "pass",
+      "status": "pending",
+      "evidence": [],
+      "reason": "",
+      "command": "python3 forge/stage4_review/diagnose_render_multi_angle.py --reference <fixed-shot> --orbit <orbit-shot> --orbit <orbit-shot>"
+    },
+    {
+      "id": "pass-gate-check",
+      "scope": "pass",
+      "status": "pending",
+      "evidence": [],
+      "reason": "",
+      "command": "python3 forge/stage3_build/orchestrate_passes.py check {spec} --pass-id {pass_id}"
+    },
+    {
+      "id": "ai-review-recorded",
+      "scope": "pass",
+      "status": "pending",
+      "evidence": [],
+      "reason": "",
+      "command": "Create the comparison sheet, inspect it with agent vision, and append exactly one review action"
+    },
+    {
+      "id": "pipeline-sync",
+      "scope": "pass",
+      "status": "pending",
+      "evidence": [],
+      "reason": "",
+      "command": "python3 forge/stage3_build/orchestrate_passes.py sync {spec} --in-place"
+    },
+    {
+      "id": "part-coverage",
+      "scope": "final",
+      "status": "pending",
+      "evidence": [],
+      "reason": "",
+      "command": "python3 forge/stage4_review/check_part_coverage.py --spec {spec} --manifest parts.json"
+    },
+    {
+      "id": "action-ready",
+      "scope": "final",
+      "status": "pending",
+      "evidence": [],
+      "reason": "",
+      "command": "Verify explodable/clickable hierarchy, pivots, sockets, and root.userData.sculptRuntime"
+    }
+  ],
+  "loops": {
+    "perPass": {
+      "blockout": 2
+    },
+    "total": 2,
+    "maxPerPass": 3,
+    "maxTotal": 6
+  },
+  "artifacts": {
+    "reference": "progress/cat-reference/user-cat-reference.png",
+    "spec": "progress/cat-reference/character-sculpt-spec.json"
+  },
+  "passHistory": [
+    {
+      "passId": "blockout",
+      "iteration": "refine",
+      "checklist": [
+        {
+          "id": "build-current-pass",
+          "scope": "pass",
+          "status": "done",
+          "evidence": [
+            "src/cat.js"
+          ],
+          "reason": "",
+          "command": "python3 forge/stage3_build/generate_threejs_factory.py {spec} --out src/createObjectModel.ts --pass-id {pass_id}"
+        },
+        {
+          "id": "render-capture",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "Render {pass_id} and capture the fixed review view plus meaningful orbit views"
+        },
+        {
+          "id": "review-contract-read",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "Read grimoire/review/gates_reference.md and grimoire/review/self_correction.md completely"
+        },
+        {
+          "id": "tier1-diagnostics",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "python3 forge/stage4_review/diagnose_render.py --reference {reference} --render <shot> --spec {spec} --pass-id {pass_id} --in-place"
+        },
+        {
+          "id": "multi-angle-review",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "python3 forge/stage4_review/diagnose_render_multi_angle.py --reference <fixed-shot> --orbit <orbit-shot> --orbit <orbit-shot>"
+        },
+        {
+          "id": "pass-gate-check",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "python3 forge/stage3_build/orchestrate_passes.py check {spec} --pass-id {pass_id}"
+        },
+        {
+          "id": "ai-review-recorded",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "Create the comparison sheet, inspect it with agent vision, and append exactly one review action"
+        },
+        {
+          "id": "pipeline-sync",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "python3 forge/stage3_build/orchestrate_passes.py sync {spec} --in-place"
+        }
+      ]
+    },
+    {
+      "passId": "blockout",
+      "iteration": "refine",
+      "checklist": [
+        {
+          "id": "build-current-pass",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "python3 forge/stage3_build/generate_threejs_factory.py {spec} --out src/createObjectModel.ts --pass-id {pass_id}"
+        },
+        {
+          "id": "render-capture",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "Render {pass_id} and capture the fixed review view plus meaningful orbit views"
+        },
+        {
+          "id": "review-contract-read",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "Read grimoire/review/gates_reference.md and grimoire/review/self_correction.md completely"
+        },
+        {
+          "id": "tier1-diagnostics",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "python3 forge/stage4_review/diagnose_render.py --reference {reference} --render <shot> --spec {spec} --pass-id {pass_id} --in-place"
+        },
+        {
+          "id": "multi-angle-review",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "python3 forge/stage4_review/diagnose_render_multi_angle.py --reference <fixed-shot> --orbit <orbit-shot> --orbit <orbit-shot>"
+        },
+        {
+          "id": "pass-gate-check",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "python3 forge/stage3_build/orchestrate_passes.py check {spec} --pass-id {pass_id}"
+        },
+        {
+          "id": "ai-review-recorded",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "Create the comparison sheet, inspect it with agent vision, and append exactly one review action"
+        },
+        {
+          "id": "pipeline-sync",
+          "scope": "pass",
+          "status": "pending",
+          "evidence": [],
+          "reason": "",
+          "command": "python3 forge/stage3_build/orchestrate_passes.py sync {spec} --in-place"
+        }
+      ]
+    }
+  ],
+  "reviewCursor": 3,
+  "iterationAction": "stop",
+  "stopReason": "Cancelled by the user: remove the cat, not worth the time. No further modeling, animation, evaluation or acceptance work.",
+  "resumeEvidence": [
+    {
+      "at": "2026-10-01T12:50:16.977161+00:00",
+      "priorStatus": "stopped",
+      "priorStopReason": "UNAPPROVED / pending final render evidence. Latest review action=request-input. WebGPU init and later WebGL/CDP capture stalled. No final reference/multi-angle/motion visual gate passed; parent requested bounded handoff, no more retries.",
+      "userInput": "Still does not look anything like the reference image at all",
+      "resolvedExternalBlocker": "Native Chrome actually rendered the current WebGL2 cat; native canvas exports saved. In-app CDP remains unresponsive.",
+      "evidence": "progress/cat-reference/revision-v5-plan.md",
+      "limitsUnchanged": {
+        "perPass": {
+          "blockout": 1
+        },
+        "total": 1,
+        "maxPerPass": 3,
+        "maxTotal": 6
+      }
+    }
+  ],
+  "cancelledAt": "2026-10-01T13:19:10.545668+00:00"
+}

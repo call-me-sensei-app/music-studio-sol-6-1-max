@@ -1,0 +1,146 @@
+[
+  {
+    "id": "2026-10-01T06-52-11-394Z-01-light-space",
+    "stage": "01-light-space",
+    "utc": "2026-10-01T06:52:11.394Z",
+    "tokyo": "2026-10-01 15:52:11 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T06-52-11-394Z-01-light-space",
+    "source_hash": "46ceb6f0fe45f339c632b5e1b305a4da54cae42883b1e4d30db88b4340375dd3"
+  },
+  {
+    "id": "2026-10-01T07-09-22-160Z-02-ledger-and-mechanical-core",
+    "stage": "02-ledger-and-mechanical-core",
+    "utc": "2026-10-01T07:09:22.160Z",
+    "tokyo": "2026-10-01 16:09:22 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T07-09-22-160Z-02-ledger-and-mechanical-core",
+    "source_hash": "b3fd5d482fc5f31898eff98e6e4fa8e732a5d2b49b745446285e783b81154c31"
+  },
+  {
+    "id": "2026-10-01T07-21-21-885Z-04-first-person-personality-and-wear",
+    "stage": "04-first-person-personality-and-wear",
+    "utc": "2026-10-01T07:21:21.885Z",
+    "tokyo": "2026-10-01 16:21:21 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T07-21-21-885Z-04-first-person-personality-and-wear",
+    "source_hash": "baf393a24017c2d1f3f92fb5f5fa00f1c1afeac637ba8f572bdef7a78a80624f"
+  },
+  {
+    "id": "2026-10-01T07-55-29-175Z-05-cinematic-lighting-wind-collision",
+    "stage": "05-cinematic-lighting-wind-collision",
+    "utc": "2026-10-01T07:55:29.175Z",
+    "tokyo": "2026-10-01 16:55:29 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T07-55-29-175Z-05-cinematic-lighting-wind-collision",
+    "source_hash": "bf5774962e7d1a74f9a6e425621b3f21072764945d104fc8aee94c47f041c469"
+  },
+  {
+    "id": "2026-10-01T08-23-22-340Z-06-cinematic-materials-city-and-workers",
+    "stage": "06-cinematic-materials-city-and-workers",
+    "utc": "2026-10-01T08:23:22.340Z",
+    "tokyo": "2026-10-01 17:23:22 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T08-23-22-340Z-06-cinematic-materials-city-and-workers",
+    "source_hash": "678e0c42d26e36f4c1c921d4824581e529e02160ff1e7b51fb6364da7400145b"
+  },
+  {
+    "id": "2026-10-01T09-05-54-766Z-07-window-companion-botany-facade",
+    "stage": "07-window-companion-botany-facade",
+    "utc": "2026-10-01T09:05:54.766Z",
+    "tokyo": "2026-10-01 18:05:54 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T09-05-54-766Z-07-window-companion-botany-facade",
+    "source_hash": "cca002f744eaefbb61e668d9b77ffb3b597a4af2086dcf522638322ee6dfaa05"
+  },
+  {
+    "id": "2026-10-01T09-23-22-504Z-08-local-score-concert-cloth",
+    "stage": "08-local-score-concert-cloth",
+    "utc": "2026-10-01T09:23:22.504Z",
+    "tokyo": "2026-10-01 18:23:22 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T09-23-22-504Z-08-local-score-concert-cloth",
+    "source_hash": "77179378326e2e1ef4fb5d535d2771161068a6ba52eaf6187be24cebb943a7c6"
+  },
+  {
+    "id": "2026-10-01T09-35-22-372Z-09-toonlab-feline-rebuild",
+    "stage": "09-toonlab-feline-rebuild",
+    "utc": "2026-10-01T09:35:22.372Z",
+    "tokyo": "2026-10-01 18:35:22 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T09-35-22-372Z-09-toonlab-feline-rebuild",
+    "source_hash": "6308f2d3997e6b15dd0d98f0535f806f18043886b3546c8211dfca4d8651e951"
+  },
+  {
+    "id": "2026-10-01T09-52-20-241Z-10-continuous-tuxedo-cat",
+    "stage": "10-continuous-tuxedo-cat",
+    "utc": "2026-10-01T09:52:20.241Z",
+    "tokyo": "2026-10-01 18:52:20 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T09-52-20-241Z-10-continuous-tuxedo-cat",
+    "source_hash": "f2ce98bfdba06af3de3c32ba02ba681d2000ed2b993173e05f855ac00c5ece35"
+  },
+  {
+    "id": "2026-10-01T10-11-54-617Z-11-ear-attachment-corrected-pending-reference",
+    "stage": "11-ear-attachment-corrected-pending-reference",
+    "utc": "2026-10-01T10:11:54.617Z",
+    "tokyo": "2026-10-01 19:11:54 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T10-11-54-617Z-11-ear-attachment-corrected-pending-reference",
+    "source_hash": "9262faa821d990da5b5001e76d21ef948f4c67478362912eff39f1bef0cf930b"
+  },
+  {
+    "id": "2026-10-01T10-53-00-996Z-12-guitar-held-and-cat-locomotion-foundation",
+    "stage": "12-guitar-held-and-cat-locomotion-foundation",
+    "utc": "2026-10-01T10:53:00.996Z",
+    "tokyo": "2026-10-01 19:53:00 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T10-53-00-996Z-12-guitar-held-and-cat-locomotion-foundation",
+    "source_hash": "0876c17022b25057d17d91c694e80660fbcad1146c65c7c561ed8c302937e009"
+  },
+  {
+    "id": "2026-10-01T11-59-38-069Z-13-metric-materials-contact-light-closed-eye-kitten",
+    "stage": "13-metric-materials-contact-light-closed-eye-kitten",
+    "utc": "2026-10-01T11:59:38.069Z",
+    "tokyo": "2026-10-01 20:59:38 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T11-59-38-069Z-13-metric-materials-contact-light-closed-eye-kitten",
+    "source_hash": "217eab13ae6e051d1b50275c24fc2650eedc8ff05051edaa887ca822677e7967"
+  },
+  {
+    "id": "2026-10-01T12-16-24-447Z-14-closed-eye-kitten-final-handoff",
+    "stage": "14-closed-eye-kitten-final-handoff",
+    "utc": "2026-10-01T12:16:24.447Z",
+    "tokyo": "2026-10-01 21:16:24 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T12-16-24-447Z-14-closed-eye-kitten-final-handoff",
+    "source_hash": "4a01bf8058325efeac8c478c47081f909b22bd34f854973180b51a1eeb3feef3"
+  },
+  {
+    "id": "2026-10-01T13-26-52-027Z-15-cat-removed-keys-sink",
+    "stage": "15-cat-removed-keys-sink",
+    "utc": "2026-10-01T13:26:52.027Z",
+    "tokyo": "2026-10-01 22:26:52 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T13-26-52-027Z-15-cat-removed-keys-sink",
+    "source_hash": "71159b6e189ed907e47591fab22bae607a7bddbf8390f12bf649b79c788308d5"
+  },
+  {
+    "id": "2026-10-01T17-16-45-177Z-16-music-playground-hands-qr-musical-tour",
+    "stage": "16-music-playground-hands-qr-musical-tour",
+    "utc": "2026-10-01T17:16:45.177Z",
+    "tokyo": "2026-10-02 02:16:45 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T17-16-45-177Z-16-music-playground-hands-qr-musical-tour",
+    "source_hash": "0478a90ec1ccbeb902ed608faf2c28249bbadb8f4594f9e91c743830f6dc1de5"
+  },
+  {
+    "id": "2026-10-01T20-14-58-324Z-17-original-tour-restored-continuous-song-grounded-city",
+    "stage": "17-original-tour-restored-continuous-song-grounded-city",
+    "utc": "2026-10-01T20:14:58.324Z",
+    "tokyo": "2026-10-02 05:14:58 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-01T20-14-58-324Z-17-original-tour-restored-continuous-song-grounded-city",
+    "source_hash": "8632038d62c89deb543fdea001a086d8c8b9ab7d3d53070409a575bfed455a73"
+  },
+  {
+    "id": "2026-10-02T01-46-53-902Z-18-pre-performance-baseline",
+    "stage": "18-pre-performance-baseline",
+    "utc": "2026-10-02T01:46:53.902Z",
+    "tokyo": "2026-10-02 10:46:53 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-02T01-46-53-902Z-18-pre-performance-baseline",
+    "source_hash": "8632038d62c89deb543fdea001a086d8c8b9ab7d3d53070409a575bfed455a73"
+  },
+  {
+    "id": "2026-10-02T03-05-56-728Z-19-measured-performance-and-active-clock",
+    "stage": "19-measured-performance-and-active-clock",
+    "utc": "2026-10-02T03:05:56.728Z",
+    "tokyo": "2026-10-02 12:05:56 +09:00",
+    "source_snapshot": "progress/source-snapshots/2026-10-02T03-05-56-728Z-19-measured-performance-and-active-clock",
+    "source_hash": "12e3a23e0bb8847e7ab77948f76dd9bee59a9b46d55057b2dd6b812b262b24be"
+  }
+]

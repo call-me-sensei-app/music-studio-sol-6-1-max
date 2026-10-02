@@ -1,0 +1,2 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {compose} from '../src/music.js';
+test('procedural master has the requested duration, finite PCM and headroom',()=>{const r={id:'blue',bpm:86,root:60,duration:12};const b=compose(r);assert.equal(b.data.length,12*22050);assert.ok(b.data.every(Number.isFinite));let max=0,sum=0;for(const v of b.data){max=Math.max(max,Math.abs(v));sum+=v*v;}assert.ok(max<.9);assert.ok(Math.sqrt(sum/b.data.length)>.005);assert.equal(b.data[0],0);});

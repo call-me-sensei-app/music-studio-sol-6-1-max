@@ -1,0 +1,14 @@
+{
+  "referenceAreaFraction": 0.09264294013631529,
+  "angles": [
+    {
+      "path": "progress/cat-reference/captures/v5-front-native.png",
+      "areaFraction": 0.0,
+      "ratio": 0.0,
+      "degenerate": true
+    }
+  ],
+  "degenerate": true,
+  "collapseRatio": 0.15,
+  "note": "deterministic; zero token; a flat-plane-faking-a-volume collapses in silhouette area when orbited"
+}

@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-01T14:10:22.839Z",
+  "capture_mode": "native-renderer-canvas",
+  "reason": "one-minute-development-milestone",
+  "frames_since_boot": 7399,
+  "viewport": {
+    "width": 1433,
+    "height": 1342,
+    "dpr": 1
+  },
+  "backend": "webgpu",
+  "mode": "sofa",
+  "lighting": "golden",
+  "guitar": -1,
+  "draw_calls": 883,
+  "image": {
+    "width": 1433,
+    "height": 1342
+  },
+  "source_hash": "b457ad25313e3682ee918a9f64896784a8b6a51a6de4ad0c71a7d0bfca13fcac",
+  "hud_included": false,
+  "native_renderer_export": true
+}

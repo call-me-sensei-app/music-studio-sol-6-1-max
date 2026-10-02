@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-01T19:11:11.127Z",
+  "capture_mode": "native-renderer-canvas",
+  "reason": "first-settled-frame",
+  "frames_since_boot": 95,
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "dpr": 1
+  },
+  "backend": "webgl",
+  "mode": "sofa",
+  "lighting": "golden",
+  "guitar": -1,
+  "draw_calls": 964,
+  "audio": {
+    "state": "off",
+    "ready": false,
+    "muted": false,
+    "master_rms": 0,
+    "generation_backend": "cooperative-main"
+  },
+  "ensemble": {
+    "playing": false,
+    "main": null,
+    "supporting": 0
+  },
+  "tour_music": {
+    "active": false,
+    "preparing": false,
+    "preparePhase": "off",
+    "guitar": false,
+    "keyboard": false,
+    "scheduled": 0,
+    "time": 0,
+    "original": true
+  },
+  "image": {
+    "width": 1280,
+    "height": 720
+  },
+  "source_hash": "1980eeff600e6307abf5dad44fadd0deec5352ff33d0fc779198a5d914b73bc8",
+  "hud_included": false,
+  "native_renderer_export": true
+}

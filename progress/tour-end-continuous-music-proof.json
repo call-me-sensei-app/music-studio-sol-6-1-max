@@ -1,0 +1,99 @@
+{
+  "audio": "running",
+  "audioRms": 0.03637265351438416,
+  "audioStatus": {
+    "error": "Record worker timed out.",
+    "generationBackend": "cooperative-main",
+    "muted": false,
+    "pending": [],
+    "ready": true,
+    "record": "blue0",
+    "volume": 0.65,
+    "workerMessages": 0
+  },
+  "backend": "webgl",
+  "cameraPlay": {
+    "active": false,
+    "mode": "magic",
+    "output": "guitar-0",
+    "recording": false,
+    "selectedSource": "computer",
+    "source": "off"
+  },
+  "composer": {
+    "beat": 0,
+    "editing": {
+      "humming": null,
+      "lane": "Keyboard",
+      "selectedNote": null,
+      "track": 0
+    },
+    "lastStop": "manual",
+    "main": null,
+    "playing": false,
+    "supporting": 0
+  },
+  "curtainsClosed": 6.197396932911789e-15,
+  "drawCalls": 1009,
+  "fps": 39,
+  "guitars": {
+    "poses": [
+      "mounted",
+      "mounted",
+      "mounted"
+    ],
+    "selected": -1
+  },
+  "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+  "lighting": "golden",
+  "mode": "sofa",
+  "performance": {
+    "duration": 22.206976744186047,
+    "instrument": "keyboard",
+    "notes": 56,
+    "playing": false,
+    "time": 0,
+    "title": "A softer kind of evening",
+    "underruns": 0
+  },
+  "position": 61.47219779825556,
+  "roomLights": {
+    "desk": true,
+    "fairy": true,
+    "monitor": true
+  },
+  "rpm": 33.33333333333326,
+  "software": false,
+  "sustain": false,
+  "tour": {
+    "active": false,
+    "chapter": 6,
+    "detail": "Every part is a little piece of the same song",
+    "duration": 55,
+    "fov": 64,
+    "name": "Now it’s your turn",
+    "paused": false,
+    "progress": 1,
+    "time": 55
+  },
+  "tourGuitarStage": {
+    "active": false,
+    "name": null
+  },
+  "tourMusic": {
+    "active": true,
+    "cameraEnded": true,
+    "cycle": 1,
+    "guitar": true,
+    "keyboard": true,
+    "original": true,
+    "preparePhase": "ready",
+    "preparing": false,
+    "scheduled": 268,
+    "time": 61.47219779825556
+  },
+  "tracking": true,
+  "triangles": 3036025,
+  "voices": 18,
+  "windowOpen": true
+}

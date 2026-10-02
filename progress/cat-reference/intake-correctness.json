@@ -1,0 +1,13 @@
+{
+  "action": "proceed",
+  "confirmed": false,
+  "assumptionsExposed": {
+    "primaryType": "chibi feline character",
+    "primaryDomain": "character",
+    "materialFamilies": [
+      "fur",
+      "soft tissue"
+    ]
+  },
+  "reason": "no objectness source available yet — confirmation DEFERRED to Phase 3 (OSIM). Proceeding on exposed assumptions; they remain falsifiable at Divine-Eye review."
+}

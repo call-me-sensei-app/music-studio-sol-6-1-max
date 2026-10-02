@@ -1,0 +1,11 @@
+{
+  "numeric_only": true,
+  "no_pixel_evidence": true,
+  "seconds": 55,
+  "samples": 3300,
+  "colliders": 1259,
+  "resolved": 0,
+  "maxCorrection": 0,
+  "invalid": 0,
+  "maxJump": 0.014988494112601844
+}

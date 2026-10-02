@@ -1,0 +1,592 @@
+{
+  "targetName": "Cream Chibi Window Cat",
+  "sourceImage": "progress/cat-reference/user-cat-reference.png",
+  "preSpecAssessment": {
+    "objectClass": {
+      "primaryType": "chibi feline character",
+      "primaryDomain": "character",
+      "formLanguage": [
+        "organic",
+        "character-like"
+      ],
+      "structureKind": [
+        "articulated assembly",
+        "deformable surface"
+      ],
+      "motionPotential": [
+        "articulated",
+        "bendable"
+      ],
+      "materialFamilies": [
+        "fur",
+        "soft tissue"
+      ],
+      "notes": "Single resting illustration. Hidden/standing anatomy inferred; generated sheet is design guidance, not observation."
+    },
+    "complexity": {
+      "tier": "complex",
+      "scores": {
+        "silhouetteComplexity": 2,
+        "componentCount": 2,
+        "hierarchyDepth": 3,
+        "repetitionDensity": 1,
+        "materialLayerCount": 2,
+        "localDetailDensity": 2,
+        "occlusionRisk": 3,
+        "actionReadinessNeed": 3
+      },
+      "estimatedCounts": {
+        "macroComponents": 3,
+        "mesoComponents": 9,
+        "microFeatureGroups": 7,
+        "materialLayers": 5,
+        "repetitionSystems": 2
+      },
+      "reasoning": [
+        "Chibi reference has simple broad masses but articulated skin/face/tail and guaranteed attachments require a complex rig.",
+        "Ten observed linework/marking systems are inventoried; underside and moving limbs are inferred."
+      ]
+    },
+    "specDepthDecision": {
+      "requiredDepth": "complex",
+      "minimumComponentLevels": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "needsRepetitionSystems": true,
+      "needsMaterialLocalOverrides": true,
+      "needsMultipleReviewViews": true,
+      "needsActionReadyHierarchy": true,
+      "rationale": "Three primary volumetric masses plus independently animated ears/jaw and explicit micro linework, four leg chains, coat masks, colliders and multiple cameras."
+    },
+    "unknownsToResolveBeforeImplementation": [
+      {
+        "id": "hidden-anatomy",
+        "status": "inferred",
+        "description": "Back, underside and standing proportions are not present in original. Generated multi-view is an authorized hypothesis."
+      },
+      {
+        "id": "pbr",
+        "status": "not-measurable",
+        "description": "2D anime illustration does not establish measured PBR channels. Use matte stylized shader, no alleged recovery."
+      }
+    ],
+    "detailInventory": {
+      "scanMethod": "component-zones",
+      "targetMinDetails": 10,
+      "details": [
+        {
+          "id": "head-proportion",
+          "kind": "contour",
+          "description": "oversized broad rounded cranium",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "head.head-proportion"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "ear-attachment",
+          "kind": "contour",
+          "description": "ear bases embed in skull",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "ear-left.ear-attachment"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "tail-curl",
+          "kind": "contour",
+          "description": "oversized upward curved tail",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "tail.tail-curl"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.85
+        },
+        {
+          "id": "closed-eyes",
+          "kind": "linework",
+          "description": "paired small closed smiling eyes",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "eyes.closed-eyes"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "mouth-smile",
+          "kind": "linework",
+          "description": "tiny understated mouth",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "smile.mouth-smile"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "forehead-mark",
+          "kind": "stain",
+          "description": "tapered tan crown stripe",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "head.forehead-mark"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "ear-color",
+          "kind": "stain",
+          "description": "tan outer ear and salmon interior",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "ear-left.ear-color"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "flank-patch",
+          "kind": "stain",
+          "description": "muted rose-brown flank region",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "body.flank-patch"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.85
+        },
+        {
+          "id": "tail-band",
+          "kind": "stain",
+          "description": "muted brown base and cream distal tail",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "tail.tail-band"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.85
+        },
+        {
+          "id": "paws",
+          "kind": "contour",
+          "description": "compressed rounded four paws",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "body.paws"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.85
+        },
+        {
+          "id": "whiskers",
+          "kind": "linework",
+          "description": "three fine lines per cheek",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "whiskers.whiskers"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "toes",
+          "kind": "linework",
+          "description": "paired toe creases",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "toes.toes"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "anatomy": {
+      "applies": true,
+      "source": "manual illustration landmarks; hidden joints inferred",
+      "styleHeads": 1.47,
+      "proportions": {
+        "headUnit": 0.68,
+        "torso": 0.46,
+        "legs": 0.3,
+        "shoulderWidth": 0.95,
+        "hipWidth": 0.93
+      },
+      "pose": {
+        "type": "compressed four-paw resting feline",
+        "jointAngles": {
+          "neck": [
+            0,
+            0,
+            0
+          ],
+          "hind-knee": [
+            0,
+            0,
+            0
+          ],
+          "fore-elbow": [
+            0,
+            0,
+            0
+          ]
+        },
+        "note": "Neutral standing bind rotations are not measurements of occluded joints. Runtime IK produces resting pose."
+      },
+      "faceLandmarks": {
+        "hairline": 0,
+        "eyeLine": 0.65,
+        "eyeSpacing": 0.4,
+        "noseBase": 0.74,
+        "mouthLine": 0.78,
+        "earTop": -0.25,
+        "earBottom": 0.2
+      },
+      "features": [
+        {
+          "id": "skull-width-height",
+          "value": 1.32,
+          "evidenceRef": "manual x58..262 y81..235"
+        },
+        {
+          "id": "short-muzzle",
+          "value": 0.12,
+          "confidence": 0.55,
+          "evidenceRef": "single three-quarter profile"
+        }
+      ],
+      "confidence": 0.7,
+      "note": "Quadruped, not humanoid. HU based crown-to-chin excludes ears. Back/standing anatomy inferred."
+    },
+    "sourceImage": "progress/cat-reference/user-cat-reference.png"
+  },
+  "qualityContract": {
+    "qualityBar": "complex",
+    "definitionOfDone": [
+      "Cream-white chibi feline reads as the supplied illustration from a reference-like angle, with broad head, tiny sleepy eyes, attached warm ears, rounded paws and large curled tail.",
+      "Four genuine articulated legs maintain support contact, no non-finite skinning or floating ear sockets, successful room wandering and gravity-driven return to sill.",
+      "Source-like fixed view plus two orbit, profile, rear, head and motion captures exist; remaining mismatches and inferred regions named."
+    ],
+    "minimumSpecDepth": {
+      "macroComponents": 3,
+      "mesoComponents": 8,
+      "microFeatureGroups": 5,
+      "materialLayers": 3,
+      "repetitionSystems": 1,
+      "reviewViewpoints": 4
+    },
+    "featureGroups": [
+      {
+        "id": "overall-silhouette",
+        "name": "Overall silhouette and proportions",
+        "required": true,
+        "qualityCriteria": [
+          "Bounding shape, dominant curves, negative spaces, and scale relationships are explicitly described."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "model reads as a generic placeholder instead of the reference object",
+          "major proportions are guessed without evidence"
+        ]
+      },
+      {
+        "id": "primary-structure",
+        "name": "Primary structure and hierarchy",
+        "required": true,
+        "qualityCriteria": [
+          "Major parts, joints, seams, contact points, and parent-child relationships are named before code generation."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "large visible parts are merged into one mesh",
+          "component hierarchy is too shallow for the observed complexity"
+        ]
+      },
+      {
+        "id": "attachment-joint-correctness",
+        "name": "Attachment and joint correctness",
+        "required": true,
+        "qualityCriteria": [
+          "Every visible child appendage, branch, limb, handle, connector, tube, cable, horn, wing, leg, or hinged part has an attachment contract with parent socket, localStart/localEnd, contact type, embed/overlap, and gap tolerance."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "child part root floats away from the parent",
+          "branch/limb/tube is centered in space instead of pivoting from its root",
+          "parent-child transform mixes world and local coordinates"
+        ]
+      },
+      {
+        "id": "surface-material-response",
+        "name": "Surface material response",
+        "required": true,
+        "qualityCriteria": [
+          "Albedo zones, roughness, normal/bump/displacement intent, cavity dirt, edge wear, and local overrides are specified where visible.",
+          "Important materials define independent albedo, roughness, height/normal, and AO responses instead of reusing one texture for unrelated PBR channels.",
+          "Surface response is decomposed into macro, meso, and micro frequency bands with scale and amplitude tied to object scale."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "surface looks like flat plastic",
+          "local material variation is missing or not tied to image evidence"
+        ]
+      },
+      {
+        "id": "reference-lookdev",
+        "name": "Reference color, material, and lighting response",
+        "required": true,
+        "qualityCriteria": [
+          "Material-pass names the reference-derived albedo palette, roughness variation, tactile normal/bump/displacement response, and local masks.",
+          "When a source image is available, run reference PBR extraction and require confidence >= 0.7 before treating maps as implementation-ready.",
+          "Lighting-pass names key/fill/rim or environment light, exposure, tone mapping, background, and contact shadow behavior.",
+          "Neutral, grazing-angle, and reference-matched renders prove that surface relief survives relighting and is not painted into albedo."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "model has acceptable shape but reads as flat shaded or plastic",
+          "colors are a generic average instead of reference-observed local color zones",
+          "lighting is evenly ambient and cannot reproduce the source value range"
+        ]
+      }
+    ],
+    "visualDeltaChecks": [
+      "silhouette and negative-space delta",
+      "component hierarchy depth delta",
+      "repetition density and distribution delta",
+      "material albedo/roughness/normal response delta",
+      "local feature placement and scale delta"
+    ],
+    "antiShallowSpecRules": [
+      "Do not proceed to code if qualityContract.qualityBar is unassessed.",
+      "Do not proceed to code if the spec only contains a root component for a moderate or complex object.",
+      "Do not proceed to code if required featureGroups are not represented by componentTree, materials, or repetitionSystems.",
+      "Do not proceed to code if visible local features are described only in prose and not attached to components/materials/evidenceRefs.",
+      "Do not proceed past structural-pass if attached child parts lack attachment.parentSocket, localStart, localEnd, embedDepth/overlap, and gapTolerance.",
+      "Do not pass material look-dev when albedo is reused as roughness, height, normal, or AO.",
+      "Do not pass material look-dev without macro, meso, and micro surface frequency bands for close-up materials.",
+      "Do not pass reference-fidelity material look-dev from a source image without usable referencePbr maps or an explicit documented limitation.",
+      "Do not patch a spec with extracted PBR maps when extraction confidence is below the target threshold unless the user explicitly accepts lower fidelity.",
+      "Do not place adjacent separate-geometry parts below 0.02 world-unit seam overlap (source: grimoire/build/geometry_patterns.md).",
+      "Do not satisfy raised or recessed relief, fasteners, or grip structure with a map alone when the feature affects form; use geometry or displacement (source: grimoire/build/geometry_patterns.md)."
+    ]
+  },
+  "authoringInstruction": "Fill observed object class, complexity reasoning, featureGroups, visualDeltaChecks, and unknowns before generating or implementing ObjectSculptSpec.",
+  "localSpecSearch": {
+    "collection": "core_3d",
+    "query": "Cream Chibi Window Cat quadruped feline four leg ground contact skeletal inverse kinematics chibi creature smooth implicit head attached ears curled tail",
+    "index": {
+      "status": "hit",
+      "reason": "current",
+      "fingerprint": "6857e5ab528b42ac12f4f411f862610a0bffce8e47aee3610a7603c318072fe8"
+    },
+    "matches": [
+      {
+        "record_id": "core.attachment-contract",
+        "file_path": "grimoire/readiness/joint_attachment.md",
+        "heading": "Attachment Contract",
+        "key_path": null,
+        "score": 8.391988585851,
+        "snippets": [
+          "An attached child records its parent, parent socket, local start and end, contact type, and embed depth or overlap where applicable."
+        ],
+        "source_refs": [
+          {
+            "path": "grimoire/readiness/joint_attachment.md",
+            "heading": "Attachment Contract",
+            "key_path": null
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "grimoire/readiness/joint_attachment.md"
+          },
+          {
+            "kind": "notebooklm-research",
+            "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+            "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+          }
+        ]
+      },
+      {
+        "record_id": "core.transform-local-object-space",
+        "file_path": "grimoire/intake/image_analysis.md",
+        "heading": "Layer 4 \u2014 Spatial relationships (scene-graph)",
+        "key_path": null,
+        "score": 4.292961086514,
+        "snippets": [
+          "Describe connected parts in 3D object-space using spatial predicates and a contact type rather than 2D image-space placement."
+        ],
+        "source_refs": [
+          {
+            "path": "grimoire/intake/image_analysis.md",
+            "heading": "Layer 4 \u2014 Spatial relationships (scene-graph)",
+            "key_path": null
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "grimoire/intake/image_analysis.md"
+          },
+          {
+            "kind": "notebooklm-research",
+            "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+            "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+          }
+        ]
+      },
+      {
+        "record_id": "core.shader-mapping-csg-boolean-operations-for-sub-mesh-composition",
+        "file_path": "docs/raw/img2threejs-skill-dataset.json",
+        "heading": null,
+        "key_path": "categories.rendering_shader_mapping[3]",
+        "score": 3.970370038002,
+        "snippets": [
+          "... sub-meshes procedurally instead of hand-modeling every variant. H\u00ecnh h\u1ecdc r\u1eafn c\u1ea5u tr\u00fac (h\u1ee3p/tr\u1eeb/giao) \u0111\u1ec3 k\u1ebft h\u1ee3p ho\u1eb7c c\u1eaft c\u00e1c sub-mesh v\u0169 kh\u00ed/dao theo th\u1ee7 t\u1ee5c thay v\u00ec m\u00f4 h\u00ecnh h\u00f3a th\u1ee7 c\u00f4ng t\u1eebng bi\u1ebfn th\u1ec3. Recognition cues: Needed for ..."
+        ],
+        "source_refs": [
+          {
+            "path": "docs/raw/img2threejs-skill-dataset.json",
+            "heading": null,
+            "key_path": "categories.rendering_shader_mapping[3]"
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "docs/raw/img2threejs-skill-dataset.json",
+            "note": "img2threejs NotebookLM research distillation"
+          }
+        ]
+      }
+    ]
+  }
+}

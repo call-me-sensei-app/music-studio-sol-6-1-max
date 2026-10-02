@@ -1,0 +1,189 @@
+{
+  "created_at": "2026-10-01T17:05:33.588Z",
+  "kind": "Chronological native-frame milestone montage, not continuous development recording",
+  "synthetic_frames": false,
+  "originals_untouched": true,
+  "selected": [
+    {
+      "file": "progress/captures/01-first-light.jpg",
+      "utc": "2026-10-01T07:00:53.342Z",
+      "sha256": "e61402f1905af115fa1958963e7fe659191ff4d6b0c9e277f070d9c9362ebffa",
+      "notes": "Original live-development browser frame."
+    },
+    {
+      "file": "progress/captures/02-sofa-and-live-ledger.jpg",
+      "utc": "2026-10-01T07:15:57.935Z",
+      "sha256": "72fe894f3a8f4dd1b9983068cd0afe23b80bc585709a0e2b17908dbb3557e4f1",
+      "notes": "Original live-development browser frame."
+    },
+    {
+      "file": "progress/captures/03-cozy-first-person.jpg",
+      "utc": "2026-10-01T07:22:25.546Z",
+      "sha256": "4afb2506feab5df44823fc17f58141683918fc62f2e1ac52fb8005e15b690a12",
+      "notes": "Original live-development browser frame."
+    },
+    {
+      "file": "progress/captures/05-golden-hour-physical-room.jpg",
+      "utc": "2026-10-01T07:59:28.193Z",
+      "sha256": "283bd53f993fed729e7f8b4caa851c0806d03b13d6a3cac9d48d515ce4b6983d",
+      "notes": "Original live-development browser frame."
+    },
+    {
+      "file": "progress/captures/06-refined-room-overview.jpg",
+      "utc": "2026-10-01T08:23:38.462Z",
+      "sha256": "6bfb565228002a04cb00251c5b09a6018148a4e573d842e2d4702fc23fd86507",
+      "notes": "Original live-development browser frame."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T13-42-23-495Z-keyboard.png",
+      "utc": "2026-10-01T13:42:23.497Z",
+      "sha256": "ef5d0076fe1524a8138bbc7ef7e7b48fda3d0f89c824912e9a18be28d62c4f53",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T13-44-08-249Z-guitars.png",
+      "utc": "2026-10-01T13:44:08.250Z",
+      "sha256": "726bc325769bffa994d1817b0f8be807896e2d5a79fa35b1aa03196a4c77ab25",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T13-44-42-610Z-sofa.png",
+      "utc": "2026-10-01T13:44:42.611Z",
+      "sha256": "2aacde0ed2323768d9dcf35c54a3f434458ce0d33ccd7281bb56f6a136bdaa47",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T14-01-36-282Z-room.png",
+      "utc": "2026-10-01T14:01:36.283Z",
+      "sha256": "007a4a819818ae94898a8daeda6d1c01e8186815e2e3d1e8250bec4a30b9385c",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T14-12-23-095Z-sofa.png",
+      "utc": "2026-10-01T14:12:23.096Z",
+      "sha256": "3681c6bbc0fb0146064617e361c37913bf8ffd1b2dbc74019183b922a1e371ad",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T14-15-56-086Z-keyboard.png",
+      "utc": "2026-10-01T14:15:56.087Z",
+      "sha256": "e4c77f1975ed9e916d03694360a997c0651ce20154effcd2bfca87cbe533d6ef",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T14-27-07-250Z-keyboard.png",
+      "utc": "2026-10-01T14:27:07.251Z",
+      "sha256": "0a89762983666bc6bbe5b646e27ab4d7165d5ee3316977aa08cd3ce334ec0e6f",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T14-36-42-436Z-keyboard.png",
+      "utc": "2026-10-01T14:36:42.436Z",
+      "sha256": "2b301f7e869c9bb0ff82ba73f80ff0fb190071a27c4d294e209d82af9ec87ab8",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T14-39-09-676Z-keyboard.png",
+      "utc": "2026-10-01T14:39:09.677Z",
+      "sha256": "a6b44a0960c67dd9dd2472c8a3da66a348118584ae69ce0cdf740e26d358c6cc",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T14-43-28-144Z-keyboard.png",
+      "utc": "2026-10-01T14:43:28.144Z",
+      "sha256": "4d00bf2269f6d12ce384d6b94e1a6c0f0bae26ee89084d7ff7ed6253191075ef",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T14-50-49-426Z-keyboard.png",
+      "utc": "2026-10-01T14:50:49.426Z",
+      "sha256": "2b6f0e5a8b3952f3e1cee8f9705471fe4c8dc321825575ca8b8595dad78dc867",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-03-25-526Z-keyboard.png",
+      "utc": "2026-10-01T15:03:25.527Z",
+      "sha256": "50f51b108003dbd730a19ec6f1d0636a5704623e0c0aac21297d180029b68875",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-22-35-974Z-keyboard.png",
+      "utc": "2026-10-01T15:22:35.975Z",
+      "sha256": "ac6430f16e3f28bac6a02662ec7c1ee598907ad6abc1159d3529e67a01ed9054",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-32-25-035Z-guitars.png",
+      "utc": "2026-10-01T15:32:25.036Z",
+      "sha256": "d19f844c062e89cb5a1f27171f22ad2bb5099def6b1c5a544a65d8c7f5da2bd9",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-32-31-493Z-keyboard.png",
+      "utc": "2026-10-01T15:32:31.494Z",
+      "sha256": "489d0a3565ff2db25d36db958edac4e3e514442692c2aeef3a9f9b50fbfa9ba6",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-34-54-103Z-sofa.png",
+      "utc": "2026-10-01T15:34:54.104Z",
+      "sha256": "6d267b108dbc905f708d34e4b95305c32fd2d1c9845a4cbf8b1db7770ec66bad",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-47-11-994Z-guitars.png",
+      "utc": "2026-10-01T15:47:11.996Z",
+      "sha256": "7793936e4ac4877dd9afeb985645c4a9e811e8ca517b3d993d4b3f81c3edfdea",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-47-35-946Z-keyboard.png",
+      "utc": "2026-10-01T15:47:35.947Z",
+      "sha256": "4531e1e13ce236881c9616e06bddd4eb04630df0eb213f7073ebc7006161cde6",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-49-35-947Z-concert.png",
+      "utc": "2026-10-01T15:49:35.947Z",
+      "sha256": "1eaae578cab0e463a5b1cf21b747854083519c9926287c91e3e24be7467b41fc",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-50-53-131Z-keyboard.png",
+      "utc": "2026-10-01T15:50:53.132Z",
+      "sha256": "ba66efd85c79996c5137ccf96c76e9755bbd8b028b63a42817970ca736346013",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-52-50-907Z-concert.png",
+      "utc": "2026-10-01T15:52:50.908Z",
+      "sha256": "4c2350f4e9d22bdcfb5f3715e4831697fdd99936a951bd7e89e0372f9d365768",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T15-53-02-821Z-keyboard.png",
+      "utc": "2026-10-01T15:53:02.822Z",
+      "sha256": "8841a50b5f936dcc4f5511fc307c7b37128236c8e2df735d235a05f7fe742997",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T16-47-49-120Z-guitars.png",
+      "utc": "2026-10-01T16:47:49.121Z",
+      "sha256": "baacc3b65550abf1d8e90dd557805b73ce4ca3454d044ae6d438a0c54f34851e",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T17-00-30-863Z-guitars.png",
+      "utc": "2026-10-01T17:00:30.865Z",
+      "sha256": "9fc7f4d4b6822539afadd0a0606aac8d53ee28fdbe8889f749b4eddc58dfae23",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    },
+    {
+      "file": "progress/captures/native-2026-10-01T17-04-45-755Z-guitars.png",
+      "utc": "2026-10-01T17:04:45.759Z",
+      "sha256": "3e8aec2a73adada07d55a51de5e0e3d37bd795639026257a8ee7d3563067b28f",
+      "notes": "Automatic clean native renderer frame; no HUD or synthetic pixels."
+    }
+  ],
+  "transforms": "Lossless PNG normalization to 1280x720 with letterboxing, then H.264 video encoding; originals untouched; no interpolated or generated scene frames."
+}

@@ -1,0 +1,8 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const root=path.resolve(import.meta.dirname,'..'),out=path.join(root,'public/hands'),sdk=path.join(root,'node_modules/@mediapipe/tasks-vision');
+fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(sdk,'wasm'),path.join(out,'wasm'),{recursive:true});fs.copyFileSync(path.join(sdk,'vision_bundle.js'),path.join(out,'vision_bundle.js'));
+const source=fs.readFileSync(path.join(root,'src/hand-worker.js'),'utf8').replace("import {FilesetResolver,HandLandmarker} from '@mediapipe/tasks-vision';", "importScripts('/hands/vision_bundle.js');\nconst {FilesetResolver,HandLandmarker}=self.Vision;");
+fs.writeFileSync(path.join(out,'hand-worker.js'),source);
+const model=path.join(out,'hand_landmarker.task');if(!fs.existsSync(model))throw Error('Place the official model at public/hands/hand_landmarker.task; this script never silently downloads it.');
+const manifest={model:'Google MediaPipe Hand Landmarker float16 bundle v1',source:'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task',model_sha256:crypto.createHash('sha256').update(fs.readFileSync(model)).digest('hex'),sdk:JSON.parse(fs.readFileSync(path.join(sdk,'package.json'))).version,processing:'On-device pose detection, not generative art or music. Camera capture is off until user action.',assets:Object.fromEntries(fs.readdirSync(path.join(out,'wasm')).map(n=>[n,crypto.createHash('sha256').update(fs.readFileSync(path.join(out,'wasm',n))).digest('hex')]))};
+fs.writeFileSync(path.join(out,'PROVENANCE.json'),JSON.stringify(manifest,null,2)+'\n');console.log('Prepared local classic-worker hand assets (no runtime CDN).');

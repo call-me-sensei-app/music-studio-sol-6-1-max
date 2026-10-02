@@ -1,0 +1,97 @@
+{
+  "audio": "running",
+  "audioRms": 0.02165753437282223,
+  "audioStatus": {
+    "error": "Record worker timed out.",
+    "generationBackend": "cooperative-main",
+    "muted": false,
+    "pending": [],
+    "ready": true,
+    "record": "blue0",
+    "volume": 0.65,
+    "workerMessages": 0
+  },
+  "backend": "webgl",
+  "cameraPlay": {
+    "active": false,
+    "mode": "magic",
+    "output": "guitar-0",
+    "recording": false,
+    "selectedSource": "computer",
+    "source": "off"
+  },
+  "composer": {
+    "beat": 0,
+    "editing": {
+      "humming": null,
+      "lane": "Keyboard",
+      "selectedNote": null,
+      "track": 0
+    },
+    "lastStop": "manual",
+    "main": null,
+    "playing": false,
+    "supporting": 0
+  },
+  "curtainsClosed": 0,
+  "drawCalls": 568,
+  "fps": 29,
+  "guitars": {
+    "poses": [
+      "presenting",
+      "mounted",
+      "mounted"
+    ],
+    "selected": 0
+  },
+  "hardware": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+  "lighting": "golden",
+  "mode": "tour",
+  "performance": {
+    "duration": 22.206976744186047,
+    "instrument": "keyboard",
+    "notes": 56,
+    "playing": false,
+    "time": 0,
+    "title": "A softer kind of evening",
+    "underruns": 0
+  },
+  "position": 16.5924217248733,
+  "roomLights": {
+    "desk": true,
+    "fairy": true,
+    "monitor": true
+  },
+  "rpm": 33.33333333333326,
+  "software": false,
+  "sustain": false,
+  "tour": {
+    "active": true,
+    "chapter": 2,
+    "detail": "A held guitar · chord shapes · warm strums",
+    "duration": 55,
+    "fov": 46.00789358919587,
+    "name": "Six strings join in",
+    "paused": true,
+    "progress": 0.2975860909093513,
+    "time": 16.367235000014322
+  },
+  "tourGuitarStage": {
+    "active": true,
+    "name": null
+  },
+  "tourMusic": {
+    "active": true,
+    "guitar": true,
+    "keyboard": false,
+    "original": true,
+    "preparePhase": "ready",
+    "preparing": false,
+    "scheduled": 75,
+    "time": 16.5924217248733
+  },
+  "tracking": true,
+  "triangles": 2276447,
+  "voices": 0,
+  "windowOpen": true
+}

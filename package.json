@@ -1,0 +1,26 @@
+{
+  "name": "yua-afterlight-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5174",
+    "build": "vite build",
+    "test": "node --test tests/*.test.mjs",
+    "usage": "node scripts/usage.mjs",
+    "checkpoint": "node scripts/checkpoint.mjs",
+    "prepare:hands": "node scripts/prepare-hands.mjs",
+    "serve": "node scripts/serve.mjs",
+    "postinstall": "node scripts/prepare-hands.mjs"
+  },
+  "dependencies": {
+    "@call-me-sensei/toonlab": "file:vendor/call-me-sensei-toonlab-0.5.0.tgz",
+    "@mediapipe/tasks-vision": "1.0.1",
+    "qrcode": "1.5.4",
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "vite": "8.3.1"
+  }
+}

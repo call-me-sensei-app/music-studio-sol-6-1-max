@@ -1,0 +1,5457 @@
+{
+  "targetName": "Cream Chibi Window Cat",
+  "targetId": "cream-chibi-window-cat",
+  "schemaVersion": "2.1",
+  "terminologyProfile": {
+    "domain": "real-time procedural Three.js asset",
+    "geometryTerms": [
+      "silhouette",
+      "topology",
+      "primitive",
+      "bevel",
+      "chamfer",
+      "taper",
+      "bend",
+      "boolean cut",
+      "edge loop",
+      "surface normal",
+      "displacement"
+    ],
+    "materialTerms": [
+      "albedo",
+      "baseColor",
+      "roughness",
+      "metalness",
+      "normal map",
+      "bump map",
+      "ambient occlusion",
+      "cavity dirt",
+      "edge wear",
+      "clearcoat"
+    ],
+    "lightingTerms": [
+      "key light",
+      "fill light",
+      "rim light",
+      "HDRI/environment reflection",
+      "contact shadow"
+    ],
+    "descriptionRule": "Use measurable 3D graphics terms. Avoid vague words unless they are paired with concrete geometry/material/shader parameters."
+  },
+  "sourceImage": "progress/cat-reference/user-cat-reference.png",
+  "referenceCamera": {
+    "solved": false,
+    "fovDegrees": 35,
+    "aspect": 1.0,
+    "orientation": {
+      "yaw": 0.0,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "positionHint": [
+      0.8,
+      0.65,
+      1.7
+    ],
+    "note": "Manual reference-like camera, matching original three-quarter angle; illustration perspective not exactly recoverable."
+  },
+  "suitability": "conditional",
+  "scores": {
+    "object_isolation": 0,
+    "silhouette_readability": 0,
+    "depth_inference": 0,
+    "primitive_decomposition": 0,
+    "material_procedurality": 0,
+    "occlusion_risk": 0,
+    "interaction_fit": 0
+  },
+  "preSpecAssessment": {
+    "objectClass": {
+      "primaryType": "chibi feline character",
+      "primaryDomain": "character",
+      "formLanguage": [
+        "organic",
+        "character-like"
+      ],
+      "structureKind": [
+        "articulated assembly",
+        "deformable surface"
+      ],
+      "motionPotential": [
+        "articulated",
+        "bendable"
+      ],
+      "materialFamilies": [
+        "fur",
+        "soft tissue"
+      ],
+      "notes": "Single resting illustration. Hidden/standing anatomy inferred; generated sheet is design guidance, not observation."
+    },
+    "complexity": {
+      "tier": "complex",
+      "scores": {
+        "silhouetteComplexity": 2,
+        "componentCount": 2,
+        "hierarchyDepth": 3,
+        "repetitionDensity": 1,
+        "materialLayerCount": 2,
+        "localDetailDensity": 2,
+        "occlusionRisk": 3,
+        "actionReadinessNeed": 3
+      },
+      "estimatedCounts": {
+        "macroComponents": 3,
+        "mesoComponents": 9,
+        "microFeatureGroups": 7,
+        "materialLayers": 5,
+        "repetitionSystems": 2
+      },
+      "reasoning": [
+        "Chibi reference has simple broad masses but articulated skin/face/tail and guaranteed attachments require a complex rig.",
+        "Ten observed linework/marking systems are inventoried; underside and moving limbs are inferred."
+      ]
+    },
+    "specDepthDecision": {
+      "requiredDepth": "complex",
+      "minimumComponentLevels": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "needsRepetitionSystems": true,
+      "needsMaterialLocalOverrides": true,
+      "needsMultipleReviewViews": true,
+      "needsActionReadyHierarchy": true,
+      "rationale": "Three primary volumetric masses plus independently animated ears/jaw and explicit micro linework, four leg chains, coat masks, colliders and multiple cameras."
+    },
+    "unknownsToResolveBeforeImplementation": [],
+    "detailInventory": {
+      "scanMethod": "component-zones",
+      "targetMinDetails": 10,
+      "details": [
+        {
+          "id": "head-proportion",
+          "kind": "contour",
+          "description": "oversized broad rounded cranium",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "head/head-proportion"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "ear-attachment",
+          "kind": "contour",
+          "description": "ear bases embed in skull",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "ear-left/ear-attachment"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "tail-curl",
+          "kind": "contour",
+          "description": "oversized upward curved tail",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "tail/tail-curl"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.85
+        },
+        {
+          "id": "closed-eyes",
+          "kind": "linework",
+          "description": "paired small closed smiling eyes",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "eye-left/closed-eyes"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "mouth-smile",
+          "kind": "linework",
+          "description": "tiny understated mouth",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "smile/mouth-smile"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "forehead-mark",
+          "kind": "stain",
+          "description": "tapered tan crown stripe",
+          "region": {
+            "x": 0.16,
+            "y": 0.12,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "head/forehead-mark"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "ear-color",
+          "kind": "stain",
+          "description": "tan outer ear and salmon interior",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "ear-left/ear-color"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "flank-patch",
+          "kind": "stain",
+          "description": "muted rose-brown flank region",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "body/flank-patch"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.85
+        },
+        {
+          "id": "tail-band",
+          "kind": "stain",
+          "description": "muted brown base and cream distal tail",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "tail/tail-band"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.85
+        },
+        {
+          "id": "paws",
+          "kind": "contour",
+          "description": "compressed rounded four paws",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "body/paws"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.85
+        },
+        {
+          "id": "whiskers",
+          "kind": "linework",
+          "description": "three fine lines per cheek",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "whiskers/whiskers"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        },
+        {
+          "id": "toes",
+          "kind": "linework",
+          "description": "paired toe creases",
+          "region": {
+            "x": 0.55,
+            "y": 0.48,
+            "width": 0.58,
+            "height": 0.74,
+            "units": "normalized"
+          },
+          "scale": "micro",
+          "affects": "color",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "toes/toes"
+          },
+          "evidenceRef": "user-cat-reference.png",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "anatomy": {
+      "applies": true,
+      "source": "manual illustration landmarks; hidden joints inferred",
+      "styleHeads": 1.47,
+      "proportions": {
+        "headUnit": 0.68,
+        "torso": 0.46,
+        "legs": 0.3,
+        "shoulderWidth": 0.95,
+        "hipWidth": 0.93
+      },
+      "pose": {
+        "type": "compressed four-paw resting feline",
+        "jointAngles": {
+          "neck": [
+            0,
+            0,
+            0
+          ],
+          "hind-knee": [
+            0,
+            0,
+            0
+          ],
+          "fore-elbow": [
+            0,
+            0,
+            0
+          ]
+        },
+        "note": "Neutral standing bind rotations are not measurements of occluded joints. Runtime IK produces resting pose."
+      },
+      "faceLandmarks": {
+        "hairline": 0,
+        "eyeLine": 0.65,
+        "eyeSpacing": 0.4,
+        "noseBase": 0.74,
+        "mouthLine": 0.78,
+        "earTop": -0.25,
+        "earBottom": 0.2
+      },
+      "features": [
+        {
+          "id": "skull-width-height",
+          "value": 1.32,
+          "evidenceRef": "manual x58..262 y81..235"
+        },
+        {
+          "id": "short-muzzle",
+          "value": 0.12,
+          "confidence": 0.55,
+          "evidenceRef": "single three-quarter profile"
+        }
+      ],
+      "confidence": 0.7,
+      "note": "Quadruped, not humanoid. HU based crown-to-chin excludes ears. Back/standing anatomy inferred."
+    },
+    "sourceImage": "progress/cat-reference/user-cat-reference.png"
+  },
+  "qualityContract": {
+    "qualityBar": "complex",
+    "definitionOfDone": [
+      "Cream-white chibi feline reads as the supplied illustration from a reference-like angle, with broad head, tiny sleepy eyes, attached warm ears, rounded paws and large curled tail.",
+      "Four genuine articulated legs maintain support contact, no non-finite skinning or floating ear sockets, successful room wandering and gravity-driven return to sill.",
+      "Source-like fixed view plus two orbit, profile, rear, head and motion captures exist; remaining mismatches and inferred regions named."
+    ],
+    "minimumSpecDepth": {
+      "macroComponents": 3,
+      "mesoComponents": 8,
+      "microFeatureGroups": 5,
+      "materialLayers": 3,
+      "repetitionSystems": 1,
+      "reviewViewpoints": 4
+    },
+    "featureGroups": [
+      {
+        "id": "overall-silhouette",
+        "name": "Overall silhouette and proportions",
+        "required": true,
+        "qualityCriteria": [
+          "Bounding shape, dominant curves, negative spaces, and scale relationships are explicitly described."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "model reads as a generic placeholder instead of the reference object",
+          "major proportions are guessed without evidence"
+        ]
+      },
+      {
+        "id": "primary-structure",
+        "name": "Primary structure and hierarchy",
+        "required": true,
+        "qualityCriteria": [
+          "Major parts, joints, seams, contact points, and parent-child relationships are named before code generation."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "large visible parts are merged into one mesh",
+          "component hierarchy is too shallow for the observed complexity"
+        ]
+      },
+      {
+        "id": "attachment-joint-correctness",
+        "name": "Attachment and joint correctness",
+        "required": true,
+        "qualityCriteria": [
+          "Every visible child appendage, branch, limb, handle, connector, tube, cable, horn, wing, leg, or hinged part has an attachment contract with parent socket, localStart/localEnd, contact type, embed/overlap, and gap tolerance."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "child part root floats away from the parent",
+          "branch/limb/tube is centered in space instead of pivoting from its root",
+          "parent-child transform mixes world and local coordinates"
+        ]
+      },
+      {
+        "id": "surface-material-response",
+        "name": "Surface material response",
+        "required": true,
+        "qualityCriteria": [
+          "Albedo zones, roughness, normal/bump/displacement intent, cavity dirt, edge wear, and local overrides are specified where visible.",
+          "Important materials define independent albedo, roughness, height/normal, and AO responses instead of reusing one texture for unrelated PBR channels.",
+          "Surface response is decomposed into macro, meso, and micro frequency bands with scale and amplitude tied to object scale."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "surface looks like flat plastic",
+          "local material variation is missing or not tied to image evidence"
+        ]
+      },
+      {
+        "id": "reference-lookdev",
+        "name": "Reference color, material, and lighting response",
+        "required": true,
+        "qualityCriteria": [
+          "Material-pass names the reference-derived albedo palette, roughness variation, tactile normal/bump/displacement response, and local masks.",
+          "When a source image is available, run reference PBR extraction and require confidence >= 0.7 before treating maps as implementation-ready.",
+          "Lighting-pass names key/fill/rim or environment light, exposure, tone mapping, background, and contact shadow behavior.",
+          "Neutral, grazing-angle, and reference-matched renders prove that surface relief survives relighting and is not painted into albedo."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "model has acceptable shape but reads as flat shaded or plastic",
+          "colors are a generic average instead of reference-observed local color zones",
+          "lighting is evenly ambient and cannot reproduce the source value range"
+        ]
+      }
+    ],
+    "visualDeltaChecks": [
+      "silhouette and negative-space delta",
+      "component hierarchy depth delta",
+      "repetition density and distribution delta",
+      "material albedo/roughness/normal response delta",
+      "local feature placement and scale delta"
+    ],
+    "antiShallowSpecRules": [
+      "Do not proceed to code if qualityContract.qualityBar is unassessed.",
+      "Do not proceed to code if the spec only contains a root component for a moderate or complex object.",
+      "Do not proceed to code if required featureGroups are not represented by componentTree, materials, or repetitionSystems.",
+      "Do not proceed to code if visible local features are described only in prose and not attached to components/materials/evidenceRefs.",
+      "Do not proceed past structural-pass if attached child parts lack attachment.parentSocket, localStart, localEnd, embedDepth/overlap, and gapTolerance.",
+      "Do not pass material look-dev when albedo is reused as roughness, height, normal, or AO.",
+      "Do not pass material look-dev without macro, meso, and micro surface frequency bands for close-up materials.",
+      "Do not pass reference-fidelity material look-dev from a source image without usable referencePbr maps or an explicit documented limitation.",
+      "Do not patch a spec with extracted PBR maps when extraction confidence is below the target threshold unless the user explicitly accepts lower fidelity.",
+      "Do not place adjacent separate-geometry parts below 0.02 world-unit seam overlap (source: grimoire/build/geometry_patterns.md).",
+      "Do not satisfy raised or recessed relief, fasteners, or grip structure with a map alone when the feature affects form; use geometry or displacement (source: grimoire/build/geometry_patterns.md)."
+    ]
+  },
+  "qualityTargets": {
+    "targetFidelity": 0.7,
+    "mustMatch": [
+      "macro silhouette and proportions",
+      "primary material albedo/roughness response",
+      "reference-derived PBR material response at or above 0.7 confidence when source pixels are usable",
+      "most recognizable local features"
+    ],
+    "niceToHave": [
+      "micro scratches, stains, chips, and dirt masks",
+      "secondary lighting match"
+    ],
+    "fpsTarget": 60,
+    "reviewViewpoints": [
+      "front",
+      "three-quarter",
+      "side",
+      "thickness-axis",
+      "long-axis"
+    ]
+  },
+  "selfCorrectLoop": {
+    "enabled": true,
+    "visualAcceptance": {
+      "reviewer": "ai-vision",
+      "threshold": 0.7,
+      "comparisonArtifactRequired": true,
+      "layerScoresRequired": true,
+      "codePixelDiffIsAcceptanceAuthority": false,
+      "scoringRule": "AI vision must inspect a side-by-side reference/render sheet and score the current pass from 0 to 1. Pixel-diff code may assist diagnostics but cannot approve a pass.",
+      "requiredLayerScores": [
+        "silhouetteProportion",
+        "componentStructure",
+        "formDetail",
+        "materialSurface",
+        "lightingCamera"
+      ],
+      "featureReviewPolicy": {
+        "enabled": true,
+        "reviewUnit": "semantic-subsystem",
+        "maxCriticalFeaturesPerPass": 5,
+        "maxImportantFeaturesPerPass": 3,
+        "criticalDefaultThreshold": 0.8,
+        "importantAverageThreshold": 0.65,
+        "adaptiveEscalation": true,
+        "singleImagePairOnly": true,
+        "selectionRule": "Choose only the most visually salient, identity-defining, user-prioritized, or high-risk semantic systems. Group repeated parts instead of reviewing every mesh. AI vision scores every selected feature from the same full reference/render pair."
+      }
+    },
+    "reviewAfterPasses": [
+      "blockout",
+      "structural-pass",
+      "form-refinement",
+      "material-pass",
+      "surface-pass",
+      "lighting-pass",
+      "interaction-pass",
+      "optimization-pass"
+    ],
+    "allowedActions": [
+      "continue",
+      "refine-spec",
+      "refine-code",
+      "request-input",
+      "stop"
+    ],
+    "specRefineTriggers": [
+      "missing component",
+      "wrong primitive family",
+      "wrong proportions",
+      "material layer under-specified",
+      "local feature not traceable to viewEvidence",
+      "reference ambiguity discovered during implementation"
+    ],
+    "codeRefineTriggers": [
+      "spec is adequate but generated geometry/material does not match",
+      "browser render differs from reference",
+      "performance budget exceeded",
+      "lighting hides geometry or material response"
+    ],
+    "stopCriteria": [
+      "target fidelity reached or user accepts current approximation",
+      "remaining gaps require new reference images or manual art"
+    ],
+    "screenshotPolicy": {
+      "requiredForPasses": [
+        "blockout",
+        "structural-pass",
+        "form-refinement",
+        "material-pass",
+        "surface-pass",
+        "lighting-pass",
+        "interaction-pass"
+      ],
+      "preferredCapture": "in-app-browser-screenshot",
+      "fallbackCapture": "user-supplied-screenshot-path",
+      "minimumEvidence": "Each visual pass needs a reference image, rendered screenshot, side-by-side comparison sheet, AI vision score, layer scores, and critique before choosing continue.",
+      "reviewPairRule": "Compare the same camera/viewpoint whenever possible; do not judge a front reference against a random render angle.",
+      "acceptanceAuthority": "AI vision review of the comparison sheet. Code-generated pixel similarity is not sufficient evidence."
+    }
+  },
+  "featureReviewTargets": [
+    {
+      "id": "anatomy-proportion",
+      "name": "Broad chibi head and compact paws",
+      "tier": "critical",
+      "passIds": [
+        "blockout",
+        "form-refinement"
+      ],
+      "minimumScore": 0.75,
+      "mustPass": true,
+      "componentRefs": [
+        "body",
+        "head"
+      ],
+      "evidenceRefs": [
+        "user-cat-reference.png"
+      ]
+    },
+    {
+      "id": "pose-silhouette",
+      "name": "Oversized upward curled tail",
+      "tier": "critical",
+      "passIds": [
+        "blockout",
+        "form-refinement"
+      ],
+      "minimumScore": 0.75,
+      "mustPass": true,
+      "componentRefs": [
+        "tail"
+      ],
+      "evidenceRefs": [
+        "user-cat-reference.png"
+      ]
+    },
+    {
+      "id": "attachment-system",
+      "name": "Physically embedded ears/head/tail",
+      "tier": "critical",
+      "passIds": [
+        "structural-pass",
+        "form-refinement"
+      ],
+      "minimumScore": 0.75,
+      "mustPass": true,
+      "componentRefs": [
+        "head",
+        "ear-left",
+        "ear-right",
+        "tail"
+      ],
+      "evidenceRefs": [
+        "user-cat-reference.png"
+      ]
+    },
+    {
+      "id": "face-landmark-placement",
+      "name": "Tiny sleepy eyes, short muzzle and smile",
+      "tier": "critical",
+      "passIds": [
+        "material-pass"
+      ],
+      "minimumScore": 0.75,
+      "mustPass": true,
+      "componentRefs": [
+        "head",
+        "eye-left",
+        "eye-right",
+        "smile"
+      ],
+      "evidenceRefs": [
+        "user-cat-reference.png"
+      ]
+    },
+    {
+      "id": "outfit-and-palette",
+      "name": "Cream tan rose-brown coat regions",
+      "tier": "critical",
+      "passIds": [
+        "material-pass",
+        "lighting-pass"
+      ],
+      "minimumScore": 0.75,
+      "mustPass": true,
+      "componentRefs": [
+        "head",
+        "body",
+        "tail"
+      ],
+      "evidenceRefs": [
+        "user-cat-reference.png"
+      ]
+    }
+  ],
+  "sculptPipeline": {
+    "passGateMode": "locked-sequential",
+    "passOrder": [
+      "blockout",
+      "structural-pass",
+      "form-refinement",
+      "material-pass",
+      "lighting-pass",
+      "interaction-pass",
+      "optimization-pass"
+    ],
+    "currentPass": "blockout",
+    "completedPasses": [],
+    "lastCompletedPass": "",
+    "blockedReason": "",
+    "nextRequiredEvidence": [
+      "Reference-like broad head, compressed torso/paws, attached ears and large upward tail in neutral map-stripped view.",
+      "browser render screenshot from your agent's browser/screenshot tool",
+      "side-by-side reference/render comparison sheet for AI vision review",
+      "AI vision score at or above the visual acceptance threshold",
+      "all critical semantic feature scores from the shared image pair at or above their thresholds",
+      "self-correction review appended with action=continue before the next pass"
+    ]
+  },
+  "lookDevTargets": {
+    "qualityPriority": "reference-fidelity",
+    "materialPass": {
+      "albedoPaletteRequired": true,
+      "roughnessVariationRequired": true,
+      "normalOrBumpRequired": true,
+      "localOverridesRequired": true,
+      "minimumTextureResolution": 1024,
+      "preferredTextureResolution": 2048,
+      "independentMapChannels": [
+        "albedo",
+        "roughness",
+        "height",
+        "normal",
+        "ambient-occlusion"
+      ],
+      "requiredSurfaceFrequencyBands": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "geometryReliefRequiredWhenSilhouetteAffected": true,
+      "referencePbrExtraction": {
+        "requiredWhenSourceImagePresent": false,
+        "targetThreshold": 0.7,
+        "stopOnLowConfidence": true,
+        "script": "forge/stage1_intake/extract_pbr_evidence.py",
+        "acceptedLimitation": "single-image extraction is reference-derived inference, not exact photogrammetry",
+        "reason": "Illustration only: measured PBR not identifiable; source pixels may guide palette but from-scratch project prohibits projected source textures."
+      },
+      "mustAvoid": [
+        "single flat albedo per material",
+        "uniform roughness",
+        "albedo texture reused as roughness/height/normal/AO",
+        "single-frequency random noise",
+        "plastic-looking smooth bark, stone, cloth, foliage, or aged material",
+        "local color/detail described only in prose without material masks",
+        "claiming exact PBR recovery when confidence is below the target threshold"
+      ]
+    },
+    "lightingPass": {
+      "requiredTerms": [
+        "key light",
+        "fill light",
+        "rim or environment light",
+        "exposure",
+        "tone mapping",
+        "background",
+        "contact shadow"
+      ],
+      "mustAvoid": [
+        "ambient-only lighting",
+        "flat value range",
+        "missing contact shadow",
+        "reference lighting copied without separating material readability"
+      ]
+    },
+    "screenshotReview": [
+      "Compare albedo palette and local color zones.",
+      "Compare roughness/normal/bump response under light.",
+      "Compare cavity dirt, edge wear, stains, moss, scratches, or other local masks.",
+      "Compare key/fill/rim structure, exposure, tone mapping, background, and contact shadows.",
+      "Capture a neutral-light render to verify material readability without reference lighting.",
+      "Capture a grazing-light close-up to expose flat normals, uniform roughness, tiling, and plastic highlights.",
+      "Capture a reference-matched render from the same camera framing as the source."
+    ]
+  },
+  "actionReadiness": {
+    "contract": "Every macro/meso component should be generated as a stable named Object3D pivot node with a mesh child, action metadata, optional sockets, collider proxy, and destruction metadata.",
+    "defaultRigType": "action-ready-static-rig",
+    "rootMotionNode": "root",
+    "requiredComponentFields": [
+      "id",
+      "parent",
+      "transform",
+      "attachment for child appendages, connectors, limbs, tubes, handles, legs, horns, wings, branches, or cables",
+      "actionProfile.animationRole",
+      "actionProfile.pivot",
+      "actionProfile.collider",
+      "actionProfile.destruction"
+    ],
+    "transformChannels": [
+      "translate",
+      "rotate",
+      "scale",
+      "bend",
+      "twist",
+      "detach",
+      "visibility",
+      "material-state"
+    ],
+    "authoringRules": [
+      "Do not collapse independently movable parts into one mesh.",
+      "Put transforms on component pivot groups, not only on raw meshes.",
+      "For attached child parts, put the pivot at the semantic root/socket and build visible geometry from localStart to localEnd.",
+      "Represent hinge, socket, detachable, and breakable intent even when no animation is implemented yet.",
+      "Use simplified collider proxies for runtime physics instead of visual mesh colliders by default."
+    ],
+    "destructionPolicy": {
+      "defaultBreakable": false,
+      "fractureGroupNaming": "Use stable semantic names such as body-shell, left-hinge, glass-panel, branch-segment.",
+      "debrisStrategy": "Prefer detachable component groups and a small number of procedural fragments over random mesh explosion."
+    }
+  },
+  "assumptions": [
+    "No photo projection: source pixels never used as rendered assets; user from-scratch requirement.",
+    "Generated unseen sides are proposals, not authoritative reference.",
+    "No measured PBR, no strand grooming, no exact likeness claim.",
+    "User rejected v2 exposed long legs. The actual leg links, bind skin, torso, rest pose and stride were rebuilt; not just camera or depth-scaled.",
+    "Home body heading0.65rad/head0.10rad relative keep torso and face coherent. Hidden anatomy remains inferred; current artistic review is pending."
+  ],
+  "coordinateFrame": {
+    "front": "camera-facing side in the reference image",
+    "up": "image up direction",
+    "scaleReference": "unit scale; adjust after first browser render"
+  },
+  "silhouette": {
+    "boundingShape": "",
+    "aspectRatios": [],
+    "symmetry": "",
+    "dominantCurves": [],
+    "negativeSpaces": [],
+    "landmarks": []
+  },
+  "viewEvidence": [
+    {
+      "id": "full-object",
+      "view": "primary",
+      "imageRegion": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 1.0,
+        "units": "normalized"
+      },
+      "observations": [],
+      "confidence": 0.5
+    },
+    {
+      "id": "user-cat-reference.png",
+      "view": "rest-three-quarter",
+      "imageRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "units": "normalized"
+      },
+      "observations": [
+        "Oversized head, attached ears, short muzzle, large upward tail and cream/tan patches"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "analysis.md",
+      "view": "intake-analysis",
+      "observations": [
+        "Source landmarks and hidden-anatomy inference documented"
+      ],
+      "confidence": 0.7
+    }
+  ],
+  "componentTree": [
+    {
+      "id": "root",
+      "name": "WindowCat",
+      "level": "macro",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "box",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Feline reference WindowCat; assembled-solid topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "assembled-solid",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": null,
+      "attachment": null,
+      "dimensions": {
+        "width": 1,
+        "height": 1,
+        "depth": 1,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "root",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "WindowCatSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "root",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "hidden",
+      "materialLayers": [
+        "hidden"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L3",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(0,0,0,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "body",
+      "name": "ContinuousRiggedFeline",
+      "level": "macro",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.65,
+      "primitive": "curve-sweep",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Feline reference ContinuousRiggedFeline; continuous-sculpt topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "continuous-sculpt",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals",
+        "surfaceEquation": "welded marching-tetrahedra smooth-union field, not literal tube sweep",
+        "kittenRig": {
+          "bindSpine": 0.225,
+          "restSpine": 0.112,
+          "foreLinkLengths": [
+            0.0828765564,
+            0.1018835119
+          ],
+          "hindLinkLengths": [
+            0.0856218103,
+            0.097471483
+          ],
+          "depthScale": 0.68,
+          "walkingStrideWorld": 0.12,
+          "homeHeading": 0.65,
+          "minimumPawSupport": "Planted ankle <3mm drift in scale-aware numerical test; artistic gait unapproved"
+        },
+        "referenceRestPose": "Compact loaf, terminal forepaws tucked 20mm rearward from ankle baseline; rounded paw rather than long paddle."
+      },
+      "parent": "root",
+      "attachment": {
+        "parentId": "root",
+        "parentSocket": "ContinuousRiggedFelineSocket",
+        "localStart": [
+          0,
+          0,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.315,
+          0
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.075,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.3,
+        "height": 0.357,
+        "depth": 0.48,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "ContinuousRiggedFelineSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "compound",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "fur",
+      "materialLayers": [
+        "fur"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "id": "flank-patch",
+          "name": "muted rose-brown flank region",
+          "kind": "stain",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.85,
+          "geometryEffect": "none",
+          "materialEffect": "authored local color/line mask"
+        },
+        {
+          "id": "paws",
+          "name": "compressed rounded four paws",
+          "kind": "contour",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.85,
+          "geometryEffect": "bounded smooth implicit silhouette",
+          "materialEffect": "authored local color/line mask"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L0",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(252,246,236,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "head",
+      "name": "ContinuousFelineSkull",
+      "level": "macro",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "curve-sweep",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Feline reference ContinuousFelineSkull; continuous-sculpt topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "continuous-sculpt",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals",
+        "surfaceEquation": "welded marching-tetrahedra smooth-union field, not literal tube sweep",
+        "homeHeadYaw": 0.1,
+        "referenceCorrection": "Broad cheek/forehead smooth union, main half-height .104m, half-width .178m; shallow muzzle rather than protruding paired pads."
+      },
+      "parent": "body",
+      "attachment": {
+        "parentId": "body",
+        "parentSocket": "ContinuousFelineSkullSocket",
+        "localStart": [
+          0,
+          0.12,
+          0.1677
+        ],
+        "localEnd": [
+          0.015,
+          0.231,
+          0.245
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.0925,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.39,
+        "height": 0.24,
+        "depth": 0.21,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          0.12,
+          0.1677
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "ContinuousFelineSkullSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "head",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "fur",
+      "materialLayers": [
+        "fur"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "id": "head-proportion",
+          "name": "oversized broad rounded cranium",
+          "kind": "contour",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.95,
+          "geometryEffect": "bounded smooth implicit silhouette",
+          "materialEffect": "authored local color/line mask"
+        },
+        {
+          "id": "forehead-mark",
+          "name": "tapered tan crown stripe",
+          "kind": "stain",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.95,
+          "geometryEffect": "none",
+          "materialEffect": "authored local color/line mask"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L0",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(252,246,236,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "tail",
+      "name": "ThickCurledTail",
+      "level": "macro",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "curve-sweep",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Feline reference ThickCurledTail; continuous-sculpt topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "continuous-sculpt",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals",
+        "referenceCorrection": "Broad C curl with bend radius exceeding tube radius; avoid folded/inverted inner tip."
+      },
+      "parent": "body",
+      "attachment": {
+        "parentId": "body",
+        "parentSocket": "ThickCurledTailSocket",
+        "localStart": [
+          -0.026,
+          -0.017,
+          -0.211
+        ],
+        "localEnd": [
+          -0.026,
+          0.31199999999999994,
+          -0.313
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.05,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.2,
+        "height": 0.33,
+        "depth": 0.28,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          -0.026,
+          -0.017,
+          -0.211
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "ThickCurledTailSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "tail",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "fur",
+      "materialLayers": [
+        "fur"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "id": "tail-curl",
+          "name": "oversized upward curved tail",
+          "kind": "contour",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.85,
+          "geometryEffect": "bounded smooth implicit silhouette",
+          "materialEffect": "authored local color/line mask"
+        },
+        {
+          "id": "tail-band",
+          "name": "muted brown base and cream distal tail",
+          "kind": "stain",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.85,
+          "geometryEffect": "none",
+          "materialEffect": "authored local color/line mask"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L1",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(252,246,236,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "ear-left",
+      "name": "LeftEar",
+      "level": "meso",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "curve-sweep",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Feline reference LeftEar; continuous-sculpt topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "continuous-sculpt",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals",
+        "referenceCorrection": "Rounded triangular shell, half-base .064m and height .123m; embedded roots, not thin disconnected wedges."
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "LeftEarSocket",
+        "localStart": [
+          -0.094,
+          0.086,
+          -0.005
+        ],
+        "localEnd": [
+          -0.094,
+          0.191,
+          -0.005
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.035,
+        "endRadius": 0.002,
+        "embedDepth": 0.026,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.14,
+        "height": 0.15,
+        "depth": 0.042,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          -0.094,
+          0.086,
+          -0.005
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "LeftEarSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "ear-left",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "ear",
+      "materialLayers": [
+        "ear"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "id": "ear-attachment",
+          "name": "ear bases embed in skull",
+          "kind": "contour",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.95,
+          "geometryEffect": "bounded smooth implicit silhouette",
+          "materialEffect": "authored local color/line mask"
+        },
+        {
+          "id": "ear-color",
+          "name": "tan outer ear and salmon interior",
+          "kind": "stain",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.95,
+          "geometryEffect": "none",
+          "materialEffect": "authored local color/line mask"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L1",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(218,179,152,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "ear-right",
+      "name": "RightEar",
+      "level": "meso",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "curve-sweep",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Feline reference RightEar; continuous-sculpt topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "continuous-sculpt",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals",
+        "referenceCorrection": "Rounded triangular shell, half-base .064m and height .123m; embedded roots, not thin disconnected wedges."
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "RightEarSocket",
+        "localStart": [
+          0.094,
+          0.086,
+          -0.005
+        ],
+        "localEnd": [
+          0.094,
+          0.191,
+          -0.005
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.035,
+        "endRadius": 0.002,
+        "embedDepth": 0.026,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.14,
+        "height": 0.15,
+        "depth": 0.042,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0.094,
+          0.086,
+          -0.005
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "RightEarSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "ear-right",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "ear",
+      "materialLayers": [
+        "ear"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L1",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(218,179,152,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "eye-left",
+      "name": "LeftEye",
+      "level": "meso",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "plane-card",
+      "topologyClass": "material-only",
+      "topologyRationale": "Feline reference LeftEye; material-only topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "material-only",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals",
+        "expression": "Permanently closed brown lid curve, no iris or sclera; blink/squint and head movement only."
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "LeftEyeSocket",
+        "localStart": [
+          -0.074,
+          -0.018,
+          0.116
+        ],
+        "localEnd": [
+          -0.074,
+          0.006500000000000002,
+          0.116
+        ],
+        "contactType": "surface-contact",
+        "baseRadius": 0.0175,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.07,
+        "height": 0.035,
+        "depth": 0.002,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          -0.074,
+          -0.018,
+          0.116
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "LeftEyeSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "eye-left",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "line",
+      "materialLayers": [
+        "line"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "id": "closed-eyes",
+          "name": "paired small closed smiling eyes",
+          "kind": "linework",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.95,
+          "geometryEffect": "none",
+          "materialEffect": "authored local color/line mask"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L5",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(147,86,68,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "eye-right",
+      "name": "RightEye",
+      "level": "meso",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "plane-card",
+      "topologyClass": "material-only",
+      "topologyRationale": "Feline reference RightEye; material-only topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "material-only",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals",
+        "expression": "Permanently closed brown lid curve, no iris or sclera; blink/squint and head movement only."
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "RightEyeSocket",
+        "localStart": [
+          0.074,
+          -0.018,
+          0.116
+        ],
+        "localEnd": [
+          0.074,
+          0.006500000000000002,
+          0.116
+        ],
+        "contactType": "surface-contact",
+        "baseRadius": 0.0175,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.07,
+        "height": 0.035,
+        "depth": 0.002,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0.074,
+          -0.018,
+          0.116
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "RightEyeSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "eye-right",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "line",
+      "materialLayers": [
+        "line"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L5",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(147,86,68,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "jaw",
+      "name": "HingedLowerJaw",
+      "level": "meso",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "curve-sweep",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Feline reference HingedLowerJaw; continuous-sculpt topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "continuous-sculpt",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals",
+        "surfaceEquation": "welded marching-tetrahedra smooth-union field, not literal tube sweep"
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "HingedLowerJawSocket",
+        "localStart": [
+          0,
+          -0.074,
+          0.047
+        ],
+        "localEnd": [
+          0,
+          -0.0439,
+          0.047
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.02125,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.085,
+        "height": 0.043,
+        "depth": 0.078,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.074,
+          0.047
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "HingedLowerJawSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "jaw",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "fur",
+      "materialLayers": [
+        "fur"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L0",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(252,246,236,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "mouth",
+      "name": "RecessedMouthInterior",
+      "level": "meso",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "curve-sweep",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Feline reference RecessedMouthInterior; continuous-sculpt topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "continuous-sculpt",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "RecessedMouthInteriorSocket",
+        "localStart": [
+          0,
+          -0.085,
+          0.093
+        ],
+        "localEnd": [
+          0,
+          -0.05560000000000001,
+          0.093
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.01825,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.073,
+        "height": 0.042,
+        "depth": 0.01,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.085,
+          0.093
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "RecessedMouthInteriorSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "mouth",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "oral",
+      "materialLayers": [
+        "oral"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L3",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(117,75,78,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "nose",
+      "name": "SmallTriangularNose",
+      "level": "meso",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "extrude",
+      "topologyClass": "surface-relief",
+      "topologyRationale": "Feline reference SmallTriangularNose; surface-relief topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "surface-relief",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "SmallTriangularNoseSocket",
+        "localStart": [
+          0,
+          -0.06,
+          0.13
+        ],
+        "localEnd": [
+          0,
+          -0.0544,
+          0.13
+        ],
+        "contactType": "surface-contact",
+        "baseRadius": 0.003,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.012,
+        "height": 0.008,
+        "depth": 0.001,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.06,
+          0.13
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "SmallTriangularNoseSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "nose",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "pink",
+      "materialLayers": [
+        "pink"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L3",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(207,150,144,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "tongue",
+      "name": "TongueInsideJaw",
+      "level": "meso",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "curve-sweep",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Feline reference TongueInsideJaw; continuous-sculpt topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "continuous-sculpt",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": "jaw",
+      "attachment": {
+        "parentId": "jaw",
+        "parentSocket": "TongueInsideJawSocket",
+        "localStart": [
+          0,
+          -0.002,
+          0.04
+        ],
+        "localEnd": [
+          0,
+          0.0036,
+          0.04
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.0075,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.03,
+        "height": 0.008,
+        "depth": 0.048,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.002,
+          0.04
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "TongueInsideJawSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "tongue",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "pink",
+      "materialLayers": [
+        "pink"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L3",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(207,150,144,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "whiskers",
+      "name": "Whiskers",
+      "level": "meso",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "tube",
+      "topologyClass": "fiber-strand",
+      "topologyRationale": "Feline reference Whiskers; fiber-strand topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "fiber-strand",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "WhiskersSocket",
+        "localStart": [
+          0,
+          -0.059,
+          0.125
+        ],
+        "localEnd": [
+          0,
+          -0.031,
+          0.125
+        ],
+        "contactType": "surface-contact",
+        "baseRadius": 0.0675,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.27,
+        "height": 0.04,
+        "depth": 0.02,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.059,
+          0.125
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "WhiskersSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "whiskers",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "line",
+      "materialLayers": [
+        "line"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "id": "whiskers",
+          "name": "three fine lines per cheek",
+          "kind": "linework",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.95,
+          "geometryEffect": "none",
+          "materialEffect": "authored local color/line mask"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L3",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(147,86,68,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "smile",
+      "name": "ClosedMouthLine",
+      "level": "micro",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "tube",
+      "topologyClass": "fiber-strand",
+      "topologyRationale": "Feline reference ClosedMouthLine; fiber-strand topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "fiber-strand",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "ClosedMouthLineSocket",
+        "localStart": [
+          0,
+          -0.082,
+          0.134
+        ],
+        "localEnd": [
+          0,
+          -0.07500000000000001,
+          0.134
+        ],
+        "contactType": "surface-contact",
+        "baseRadius": 0.00975,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.039,
+        "height": 0.01,
+        "depth": 0.01,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.082,
+          0.134
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "ClosedMouthLineSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "smile",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "line",
+      "materialLayers": [
+        "line"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "id": "mouth-smile",
+          "name": "tiny understated mouth",
+          "kind": "linework",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.95,
+          "geometryEffect": "none",
+          "materialEffect": "authored local color/line mask"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L3",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(147,86,68,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "toes",
+      "name": "ToeCreases",
+      "level": "micro",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "tube",
+      "topologyClass": "fiber-strand",
+      "topologyRationale": "Feline reference ToeCreases; fiber-strand topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "fiber-strand",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": "body",
+      "attachment": {
+        "parentId": "body",
+        "parentSocket": "ToeCreasesSocket",
+        "localStart": [
+          0,
+          0.033,
+          0.228
+        ],
+        "localEnd": [
+          0,
+          0.0386,
+          0.228
+        ],
+        "contactType": "surface-contact",
+        "baseRadius": 0.006,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.024,
+        "height": 0.008,
+        "depth": 0.01,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          0.033,
+          0.228
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "ToeCreasesSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "toes",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "line",
+      "materialLayers": [
+        "line"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "id": "toes",
+          "name": "paired toe creases",
+          "kind": "linework",
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ],
+          "confidence": 0.95,
+          "geometryEffect": "none",
+          "materialEffect": "authored local color/line mask"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L3",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(147,86,68,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "cheek-blush",
+      "name": "CheekBlush",
+      "level": "micro",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "plane-card",
+      "topologyClass": "material-only",
+      "topologyRationale": "Feline reference CheekBlush; material-only topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "material-only",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "CheekBlushSocket",
+        "localStart": [
+          0,
+          -0.047,
+          0.114
+        ],
+        "localEnd": [
+          0,
+          -0.007800000000000001,
+          0.114
+        ],
+        "contactType": "surface-contact",
+        "baseRadius": 0.06,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.24,
+        "height": 0.056,
+        "depth": 0.01,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.047,
+          0.114
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "CheekBlushSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "cheek-blush",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "fur",
+      "materialLayers": [
+        "fur"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L5",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(252,246,236,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "tooth-left",
+      "name": "UpperCanineLeft",
+      "level": "micro",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "cone",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Feline reference UpperCanineLeft; assembled-solid topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "assembled-solid",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "UpperCanineLeftSocket",
+        "localStart": [
+          -0.024,
+          -0.083,
+          0.122
+        ],
+        "localEnd": [
+          -0.024,
+          -0.07600000000000001,
+          0.122
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.00125,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.005,
+        "height": 0.01,
+        "depth": 0.005,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          -0.024,
+          -0.083,
+          0.122
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "UpperCanineLeftSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "tooth-left",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "fur",
+      "materialLayers": [
+        "fur"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L3",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(252,246,236,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    },
+    {
+      "id": "tooth-right",
+      "name": "UpperCanineRight",
+      "level": "micro",
+      "role": "body",
+      "importance": 1.0,
+      "confidence": 0.9,
+      "primitive": "cone",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Feline reference UpperCanineRight; assembled-solid topology, not a generic humanoid primitive",
+      "geometryDescriptor": {
+        "topologyIntent": "assembled-solid",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated planar patch / arc-length sweep",
+        "normalStrategy": "field-gradient / analytic swept normals"
+      },
+      "parent": "head",
+      "attachment": {
+        "parentId": "head",
+        "parentSocket": "UpperCanineRightSocket",
+        "localStart": [
+          0.024,
+          -0.083,
+          0.122
+        ],
+        "localEnd": [
+          0.024,
+          -0.07600000000000001,
+          0.122
+        ],
+        "contactType": "embedded",
+        "baseRadius": 0.00125,
+        "endRadius": 0.002,
+        "embedDepth": 0.022,
+        "overlap": 0.026,
+        "gapTolerance": 0.001,
+        "evidenceRefs": [
+          "user-cat-reference.png",
+          "analysis.md"
+        ]
+      },
+      "dimensions": {
+        "width": 0.005,
+        "height": 0.01,
+        "depth": 0.005,
+        "units": "meters-before-room-scale-0.75",
+        "confidence": 0.65
+      },
+      "transform": {
+        "position": [
+          0.024,
+          -0.083,
+          0.122
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.7
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": false
+        },
+        "sockets": [
+          {
+            "id": "UpperCanineRightSocket",
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "ellipsoid",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false,
+          "notes": "box proxy"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "tooth-right",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hidden"
+        }
+      },
+      "material": "fur",
+      "materialLayers": [
+        "fur"
+      ],
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "normalPattern": "",
+        "displacementPattern": "",
+        "occlusionPattern": "",
+        "edgeWearPattern": "",
+        "notes": ""
+      },
+      "evidenceRefs": [
+        "user-cat-reference.png",
+        "analysis.md"
+      ],
+      "details": [],
+      "fidelityTier": "blockout",
+      "primaryGeometryLayer": "L3",
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(252,246,236,1)",
+        "secondaryAlbedo": "rgba(182,141,128,1)",
+        "materialClass": "unknown",
+        "materialClassConfidence": 0.5,
+        "evidenceRefs": [
+          "user-cat-reference.png"
+        ],
+        "note": "Palette interpretation from illustration; no PBR recovery."
+      }
+    }
+  ],
+  "materials": [
+    {
+      "id": "hidden",
+      "name": "hidden",
+      "type": "standard",
+      "shaderModel": "ToonLab 0.5.0 public TSL anime shader",
+      "baseColor": "#000000",
+      "color": "#000000",
+      "albedo": {
+        "dominant": "#000000",
+        "secondary": [
+          "#000000"
+        ],
+        "samplingNotes": "Visible illustration palette; shading excluded from exact albedo claim"
+      },
+      "colorVariation": {
+        "palette": [
+          "#000000",
+          "#000000"
+        ],
+        "pattern": "flat",
+        "amplitude": 0.08,
+        "heightCorrelation": 0
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "uv",
+        "repeat": [
+          2.0,
+          2.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Preserve stable world/object-scale detail; do not stretch micro detail with component scale."
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2,
+          "amplitude": 0.08,
+          "role": "coat patches"
+        },
+        {
+          "id": "meso",
+          "frequency": 10,
+          "amplitude": 1e-06,
+          "role": "geometry carries cheek/paw masses"
+        },
+        {
+          "id": "micro",
+          "frequency": 50,
+          "amplitude": 1e-06,
+          "role": "deliberately no noisy fur normals in clean anime style"
+        }
+      ],
+      "roughness": {
+        "base": 0.87,
+        "variation": 0.03,
+        "map": "independent inferred matte response",
+        "localResponse": "non-measured, controlled stylized response"
+      },
+      "metalness": {
+        "base": 0.0,
+        "variation": 0.0
+      },
+      "normal": {
+        "pattern": "none",
+        "strength": 0,
+        "scale": 1,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0
+      },
+      "displacement": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0,
+        "silhouetteAffects": false
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.25,
+        "contactShadowBias": 0.35,
+        "notes": "Darken creases, seams, intersections, and recessed local features."
+      },
+      "wear": {
+        "edgeWear": 0.0,
+        "scratches": [],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.0,
+        "cavityBias": 0.0,
+        "color": "#2F2A22"
+      },
+      "localOverrides": [
+        {
+          "id": "anatomical-palette",
+          "region": "coat/ear/face",
+          "color": "#000000",
+          "roughness": 0.87,
+          "confidence": 0.7,
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ]
+        }
+      ],
+      "shaderNotes": [
+        "Prefer MeshPhysicalMaterial when clearcoat, sheen, transmission, or thin-surface response is observed; otherwise use MeshStandardMaterial-compatible PBR channels.",
+        "Generate albedo, roughness, height/normal, and AO independently; never alias albedo into roughness.",
+        "Use normal/bump/displacement only when they map to observed surface relief.",
+        "Use displacement geometry when the observed relief changes the close-up silhouette; texture-only relief is insufficient there."
+      ],
+      "notes": "Stylized illustration: measured PBR unavailable; matte fur masses no noise bump."
+    },
+    {
+      "id": "fur",
+      "name": "fur",
+      "type": "standard",
+      "shaderModel": "ToonLab 0.5.0 public TSL anime shader",
+      "baseColor": "#fcf6ec",
+      "color": "#fcf6ec",
+      "albedo": {
+        "dominant": "#fcf6ec",
+        "secondary": [
+          "#b68d80",
+          "#efd2bb"
+        ],
+        "samplingNotes": "Visible illustration palette; shading excluded from exact albedo claim"
+      },
+      "colorVariation": {
+        "palette": [
+          "#b68d80",
+          "#efd2bb",
+          "#fcf6ec"
+        ],
+        "pattern": "anatomical coat masks",
+        "amplitude": 0.08,
+        "heightCorrelation": 0
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "uv",
+        "repeat": [
+          2.0,
+          2.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Preserve stable world/object-scale detail; do not stretch micro detail with component scale."
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2,
+          "amplitude": 0.08,
+          "role": "coat patches"
+        },
+        {
+          "id": "meso",
+          "frequency": 10,
+          "amplitude": 1e-06,
+          "role": "geometry carries cheek/paw masses"
+        },
+        {
+          "id": "micro",
+          "frequency": 50,
+          "amplitude": 1e-06,
+          "role": "deliberately no noisy fur normals in clean anime style"
+        }
+      ],
+      "roughness": {
+        "base": 0.87,
+        "variation": 0.03,
+        "map": "independent inferred matte response",
+        "localResponse": "non-measured, controlled stylized response"
+      },
+      "metalness": {
+        "base": 0.0,
+        "variation": 0.0
+      },
+      "normal": {
+        "pattern": "none",
+        "strength": 0,
+        "scale": 1,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0
+      },
+      "displacement": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0,
+        "silhouetteAffects": false
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.25,
+        "contactShadowBias": 0.35,
+        "notes": "Darken creases, seams, intersections, and recessed local features."
+      },
+      "wear": {
+        "edgeWear": 0.0,
+        "scratches": [],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.0,
+        "cavityBias": 0.0,
+        "color": "#2F2A22"
+      },
+      "localOverrides": [
+        {
+          "id": "anatomical-palette",
+          "region": "coat/ear/face",
+          "color": "#fcf6ec",
+          "roughness": 0.87,
+          "confidence": 0.7,
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ]
+        }
+      ],
+      "shaderNotes": [
+        "Prefer MeshPhysicalMaterial when clearcoat, sheen, transmission, or thin-surface response is observed; otherwise use MeshStandardMaterial-compatible PBR channels.",
+        "Generate albedo, roughness, height/normal, and AO independently; never alias albedo into roughness.",
+        "Use normal/bump/displacement only when they map to observed surface relief.",
+        "Use displacement geometry when the observed relief changes the close-up silhouette; texture-only relief is insufficient there."
+      ],
+      "notes": "Stylized illustration: measured PBR unavailable; matte fur masses no noise bump."
+    },
+    {
+      "id": "ear",
+      "name": "ear",
+      "type": "standard",
+      "shaderModel": "ToonLab 0.5.0 public TSL anime shader",
+      "baseColor": "#dab398",
+      "color": "#dab398",
+      "albedo": {
+        "dominant": "#dab398",
+        "secondary": [
+          "#dab398"
+        ],
+        "samplingNotes": "Visible illustration palette; shading excluded from exact albedo claim"
+      },
+      "colorVariation": {
+        "palette": [
+          "#dab398",
+          "#dab398"
+        ],
+        "pattern": "flat",
+        "amplitude": 0.08,
+        "heightCorrelation": 0
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "uv",
+        "repeat": [
+          2.0,
+          2.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Preserve stable world/object-scale detail; do not stretch micro detail with component scale."
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2,
+          "amplitude": 0.08,
+          "role": "coat patches"
+        },
+        {
+          "id": "meso",
+          "frequency": 10,
+          "amplitude": 1e-06,
+          "role": "geometry carries cheek/paw masses"
+        },
+        {
+          "id": "micro",
+          "frequency": 50,
+          "amplitude": 1e-06,
+          "role": "deliberately no noisy fur normals in clean anime style"
+        }
+      ],
+      "roughness": {
+        "base": 0.87,
+        "variation": 0.03,
+        "map": "independent inferred matte response",
+        "localResponse": "non-measured, controlled stylized response"
+      },
+      "metalness": {
+        "base": 0.0,
+        "variation": 0.0
+      },
+      "normal": {
+        "pattern": "none",
+        "strength": 0,
+        "scale": 1,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0
+      },
+      "displacement": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0,
+        "silhouetteAffects": false
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.25,
+        "contactShadowBias": 0.35,
+        "notes": "Darken creases, seams, intersections, and recessed local features."
+      },
+      "wear": {
+        "edgeWear": 0.0,
+        "scratches": [],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.0,
+        "cavityBias": 0.0,
+        "color": "#2F2A22"
+      },
+      "localOverrides": [
+        {
+          "id": "anatomical-palette",
+          "region": "coat/ear/face",
+          "color": "#dab398",
+          "roughness": 0.87,
+          "confidence": 0.7,
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ]
+        }
+      ],
+      "shaderNotes": [
+        "Prefer MeshPhysicalMaterial when clearcoat, sheen, transmission, or thin-surface response is observed; otherwise use MeshStandardMaterial-compatible PBR channels.",
+        "Generate albedo, roughness, height/normal, and AO independently; never alias albedo into roughness.",
+        "Use normal/bump/displacement only when they map to observed surface relief.",
+        "Use displacement geometry when the observed relief changes the close-up silhouette; texture-only relief is insufficient there."
+      ],
+      "notes": "Stylized illustration: measured PBR unavailable; matte fur masses no noise bump."
+    },
+    {
+      "id": "pink",
+      "name": "pink",
+      "type": "standard",
+      "shaderModel": "ToonLab 0.5.0 public TSL anime shader",
+      "baseColor": "#cf9690",
+      "color": "#cf9690",
+      "albedo": {
+        "dominant": "#cf9690",
+        "secondary": [
+          "#cf9690"
+        ],
+        "samplingNotes": "Visible illustration palette; shading excluded from exact albedo claim"
+      },
+      "colorVariation": {
+        "palette": [
+          "#cf9690",
+          "#cf9690"
+        ],
+        "pattern": "flat",
+        "amplitude": 0.08,
+        "heightCorrelation": 0
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "uv",
+        "repeat": [
+          2.0,
+          2.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Preserve stable world/object-scale detail; do not stretch micro detail with component scale."
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2,
+          "amplitude": 0.08,
+          "role": "coat patches"
+        },
+        {
+          "id": "meso",
+          "frequency": 10,
+          "amplitude": 1e-06,
+          "role": "geometry carries cheek/paw masses"
+        },
+        {
+          "id": "micro",
+          "frequency": 50,
+          "amplitude": 1e-06,
+          "role": "deliberately no noisy fur normals in clean anime style"
+        }
+      ],
+      "roughness": {
+        "base": 0.87,
+        "variation": 0.03,
+        "map": "independent inferred matte response",
+        "localResponse": "non-measured, controlled stylized response"
+      },
+      "metalness": {
+        "base": 0.0,
+        "variation": 0.0
+      },
+      "normal": {
+        "pattern": "none",
+        "strength": 0,
+        "scale": 1,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0
+      },
+      "displacement": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0,
+        "silhouetteAffects": false
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.25,
+        "contactShadowBias": 0.35,
+        "notes": "Darken creases, seams, intersections, and recessed local features."
+      },
+      "wear": {
+        "edgeWear": 0.0,
+        "scratches": [],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.0,
+        "cavityBias": 0.0,
+        "color": "#2F2A22"
+      },
+      "localOverrides": [
+        {
+          "id": "anatomical-palette",
+          "region": "coat/ear/face",
+          "color": "#cf9690",
+          "roughness": 0.87,
+          "confidence": 0.7,
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ]
+        }
+      ],
+      "shaderNotes": [
+        "Prefer MeshPhysicalMaterial when clearcoat, sheen, transmission, or thin-surface response is observed; otherwise use MeshStandardMaterial-compatible PBR channels.",
+        "Generate albedo, roughness, height/normal, and AO independently; never alias albedo into roughness.",
+        "Use normal/bump/displacement only when they map to observed surface relief.",
+        "Use displacement geometry when the observed relief changes the close-up silhouette; texture-only relief is insufficient there."
+      ],
+      "notes": "Stylized illustration: measured PBR unavailable; matte fur masses no noise bump."
+    },
+    {
+      "id": "line",
+      "name": "line",
+      "type": "standard",
+      "shaderModel": "ToonLab 0.5.0 public TSL anime shader",
+      "baseColor": "#935644",
+      "color": "#935644",
+      "albedo": {
+        "dominant": "#935644",
+        "secondary": [
+          "#935644"
+        ],
+        "samplingNotes": "Visible illustration palette; shading excluded from exact albedo claim"
+      },
+      "colorVariation": {
+        "palette": [
+          "#935644",
+          "#935644"
+        ],
+        "pattern": "flat",
+        "amplitude": 0.08,
+        "heightCorrelation": 0
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "uv",
+        "repeat": [
+          2.0,
+          2.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Preserve stable world/object-scale detail; do not stretch micro detail with component scale."
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2,
+          "amplitude": 0.08,
+          "role": "coat patches"
+        },
+        {
+          "id": "meso",
+          "frequency": 10,
+          "amplitude": 1e-06,
+          "role": "geometry carries cheek/paw masses"
+        },
+        {
+          "id": "micro",
+          "frequency": 50,
+          "amplitude": 1e-06,
+          "role": "deliberately no noisy fur normals in clean anime style"
+        }
+      ],
+      "roughness": {
+        "base": 0.87,
+        "variation": 0.03,
+        "map": "independent inferred matte response",
+        "localResponse": "non-measured, controlled stylized response"
+      },
+      "metalness": {
+        "base": 0.0,
+        "variation": 0.0
+      },
+      "normal": {
+        "pattern": "none",
+        "strength": 0,
+        "scale": 1,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0
+      },
+      "displacement": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0,
+        "silhouetteAffects": false
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.25,
+        "contactShadowBias": 0.35,
+        "notes": "Darken creases, seams, intersections, and recessed local features."
+      },
+      "wear": {
+        "edgeWear": 0.0,
+        "scratches": [],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.0,
+        "cavityBias": 0.0,
+        "color": "#2F2A22"
+      },
+      "localOverrides": [
+        {
+          "id": "anatomical-palette",
+          "region": "coat/ear/face",
+          "color": "#935644",
+          "roughness": 0.87,
+          "confidence": 0.7,
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ]
+        }
+      ],
+      "shaderNotes": [
+        "Prefer MeshPhysicalMaterial when clearcoat, sheen, transmission, or thin-surface response is observed; otherwise use MeshStandardMaterial-compatible PBR channels.",
+        "Generate albedo, roughness, height/normal, and AO independently; never alias albedo into roughness.",
+        "Use normal/bump/displacement only when they map to observed surface relief.",
+        "Use displacement geometry when the observed relief changes the close-up silhouette; texture-only relief is insufficient there."
+      ],
+      "notes": "Stylized illustration: measured PBR unavailable; matte fur masses no noise bump."
+    },
+    {
+      "id": "oral",
+      "name": "oral",
+      "type": "standard",
+      "shaderModel": "ToonLab 0.5.0 public TSL anime shader",
+      "baseColor": "#754b4e",
+      "color": "#754b4e",
+      "albedo": {
+        "dominant": "#754b4e",
+        "secondary": [
+          "#754b4e"
+        ],
+        "samplingNotes": "Visible illustration palette; shading excluded from exact albedo claim"
+      },
+      "colorVariation": {
+        "palette": [
+          "#754b4e",
+          "#754b4e"
+        ],
+        "pattern": "flat",
+        "amplitude": 0.08,
+        "heightCorrelation": 0
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "uv",
+        "repeat": [
+          2.0,
+          2.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Preserve stable world/object-scale detail; do not stretch micro detail with component scale."
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2,
+          "amplitude": 0.08,
+          "role": "coat patches"
+        },
+        {
+          "id": "meso",
+          "frequency": 10,
+          "amplitude": 1e-06,
+          "role": "geometry carries cheek/paw masses"
+        },
+        {
+          "id": "micro",
+          "frequency": 50,
+          "amplitude": 1e-06,
+          "role": "deliberately no noisy fur normals in clean anime style"
+        }
+      ],
+      "roughness": {
+        "base": 0.87,
+        "variation": 0.03,
+        "map": "independent inferred matte response",
+        "localResponse": "non-measured, controlled stylized response"
+      },
+      "metalness": {
+        "base": 0.0,
+        "variation": 0.0
+      },
+      "normal": {
+        "pattern": "none",
+        "strength": 0,
+        "scale": 1,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0
+      },
+      "displacement": {
+        "pattern": "none",
+        "amplitude": 0.0,
+        "scale": 1.0,
+        "silhouetteAffects": false
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.25,
+        "contactShadowBias": 0.35,
+        "notes": "Darken creases, seams, intersections, and recessed local features."
+      },
+      "wear": {
+        "edgeWear": 0.0,
+        "scratches": [],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.0,
+        "cavityBias": 0.0,
+        "color": "#2F2A22"
+      },
+      "localOverrides": [
+        {
+          "id": "anatomical-palette",
+          "region": "coat/ear/face",
+          "color": "#754b4e",
+          "roughness": 0.87,
+          "confidence": 0.7,
+          "evidenceRefs": [
+            "user-cat-reference.png"
+          ]
+        }
+      ],
+      "shaderNotes": [
+        "Prefer MeshPhysicalMaterial when clearcoat, sheen, transmission, or thin-surface response is observed; otherwise use MeshStandardMaterial-compatible PBR channels.",
+        "Generate albedo, roughness, height/normal, and AO independently; never alias albedo into roughness.",
+        "Use normal/bump/displacement only when they map to observed surface relief.",
+        "Use displacement geometry when the observed relief changes the close-up silhouette; texture-only relief is insufficient there."
+      ],
+      "notes": "Stylized illustration: measured PBR unavailable; matte fur masses no noise bump."
+    }
+  ],
+  "repetitionSystems": [
+    {
+      "id": "whisker-pairs",
+      "componentRef": "whiskers",
+      "count": 6,
+      "distribution": "three per cheek, asymmetric tiny rake",
+      "seed": 7719,
+      "evidenceRefs": [
+        "user-cat-reference.png"
+      ]
+    },
+    {
+      "id": "toe-creases",
+      "componentRef": "toes",
+      "count": 8,
+      "distribution": "two per terminal paw bone",
+      "seed": 7719,
+      "evidenceRefs": [
+        "user-cat-reference.png"
+      ]
+    }
+  ],
+  "buildPasses": [
+    {
+      "id": "blockout",
+      "goal": "Reference-like broad head, compressed torso/paws, attached ears and large upward tail in neutral map-stripped view.",
+      "componentRefs": [
+        "root",
+        "body",
+        "head",
+        "tail",
+        "ear-left",
+        "ear-right",
+        "eye-left",
+        "eye-right",
+        "jaw",
+        "mouth",
+        "nose",
+        "tongue",
+        "whiskers",
+        "smile",
+        "toes",
+        "cheek-blush",
+        "tooth-left",
+        "tooth-right"
+      ],
+      "acceptance": [
+        "Reference-like broad head, compressed torso/paws, attached ears and large upward tail in neutral map-stripped view."
+      ]
+    },
+    {
+      "id": "structural-pass",
+      "goal": "Continuous head/skinned torso, ear depth below skull zero surface, head/jaw/tail sockets and finite rig.",
+      "componentRefs": [
+        "root",
+        "body",
+        "head",
+        "tail",
+        "ear-left",
+        "ear-right",
+        "eye-left",
+        "eye-right",
+        "jaw",
+        "mouth",
+        "nose",
+        "tongue",
+        "whiskers",
+        "smile",
+        "toes",
+        "cheek-blush",
+        "tooth-left",
+        "tooth-right"
+      ],
+      "acceptance": [
+        "Continuous head/skinned torso, ear depth below skull zero surface, head/jaw/tail sockets and finite rig."
+      ]
+    },
+    {
+      "id": "form-refinement",
+      "goal": "Short muzzle, rounded cheeks/paws, tapered soft triangular ears, thick curved tail hold across views.",
+      "componentRefs": [
+        "root",
+        "body",
+        "head",
+        "tail",
+        "ear-left",
+        "ear-right",
+        "eye-left",
+        "eye-right",
+        "jaw",
+        "mouth",
+        "nose",
+        "tongue",
+        "whiskers",
+        "smile",
+        "toes",
+        "cheek-blush",
+        "tooth-left",
+        "tooth-right"
+      ],
+      "acceptance": [
+        "Short muzzle, rounded cheeks/paws, tapered soft triangular ears, thick curved tail hold across views."
+      ]
+    },
+    {
+      "id": "material-pass",
+      "goal": "Cream/tan/rose-brown reference palette and small warm linework on neutral, grazing and reference-like views.",
+      "componentRefs": [
+        "root",
+        "body",
+        "head",
+        "tail",
+        "ear-left",
+        "ear-right",
+        "eye-left",
+        "eye-right",
+        "jaw",
+        "mouth",
+        "nose",
+        "tongue",
+        "whiskers",
+        "smile",
+        "toes",
+        "cheek-blush",
+        "tooth-left",
+        "tooth-right"
+      ],
+      "acceptance": [
+        "Cream/tan/rose-brown reference palette and small warm linework on neutral, grazing and reference-like views."
+      ]
+    },
+    {
+      "id": "lighting-pass",
+      "goal": "Real room lights do not wash out identity or force emissive cat surfaces.",
+      "componentRefs": [
+        "root",
+        "body",
+        "head",
+        "tail",
+        "ear-left",
+        "ear-right",
+        "eye-left",
+        "eye-right",
+        "jaw",
+        "mouth",
+        "nose",
+        "tongue",
+        "whiskers",
+        "smile",
+        "toes",
+        "cheek-blush",
+        "tooth-left",
+        "tooth-right"
+      ],
+      "acceptance": [
+        "Real room lights do not wash out identity or force emissive cat surfaces."
+      ]
+    },
+    {
+      "id": "interaction-pass",
+      "goal": "Four-beat planted walk, gravity-based jumps, compression/settling and camera glances without floating attachments.",
+      "componentRefs": [
+        "root",
+        "body",
+        "head",
+        "tail",
+        "ear-left",
+        "ear-right",
+        "eye-left",
+        "eye-right",
+        "jaw",
+        "mouth",
+        "nose",
+        "tongue",
+        "whiskers",
+        "smile",
+        "toes",
+        "cheek-blush",
+        "tooth-left",
+        "tooth-right"
+      ],
+      "acceptance": [
+        "Four-beat planted walk, gravity-based jumps, compression/settling and camera glances without floating attachments."
+      ]
+    },
+    {
+      "id": "optimization-pass",
+      "goal": "Conservative animated bounds, finite runtime and performance evidence, no parity claim without backend captures.",
+      "componentRefs": [
+        "root",
+        "body",
+        "head",
+        "tail",
+        "ear-left",
+        "ear-right",
+        "eye-left",
+        "eye-right",
+        "jaw",
+        "mouth",
+        "nose",
+        "tongue",
+        "whiskers",
+        "smile",
+        "toes",
+        "cheek-blush",
+        "tooth-left",
+        "tooth-right"
+      ],
+      "acceptance": [
+        "Conservative animated bounds, finite runtime and performance evidence, no parity claim without backend captures."
+      ]
+    }
+  ],
+  "visualEvidence": [
+    {
+      "timestamp": "2026-10-01T11:00:23.138289+00:00",
+      "passId": "blockout",
+      "estimatedFidelity": 0.45,
+      "aiVisionScore": null,
+      "visualAcceptanceThreshold": 0.7,
+      "layerScores": {},
+      "featureReviews": [],
+      "referenceScreenshot": "progress/cat-reference/user-cat-reference.png",
+      "renderScreenshot": "progress/cat-reference/captures/blockout-hero-v1.jpg",
+      "comparisonImage": "progress/cat-reference/comparison-blockout-v1.png",
+      "cameraView": "",
+      "notes": "",
+      "aiVisionNotes": ""
+    },
+    {
+      "timestamp": "2026-10-01T12:07:19.152362+00:00",
+      "passId": "blockout",
+      "estimatedFidelity": 0.45,
+      "aiVisionScore": null,
+      "visualAcceptanceThreshold": 0.7,
+      "layerScores": {},
+      "featureReviews": [],
+      "referenceScreenshot": "progress/cat-reference/user-cat-reference.png",
+      "renderScreenshot": "progress/cat-reference/captures/compact-kitten-v3-webgl.jpg",
+      "comparisonImage": "",
+      "cameraView": "",
+      "notes": "",
+      "aiVisionNotes": ""
+    }
+  ],
+  "reviewHistory": [
+    {
+      "timestamp": "2026-10-01T11:00:23.138289+00:00",
+      "passId": "blockout",
+      "estimatedFidelity": 0.45,
+      "aiVisionScore": null,
+      "visualAcceptanceThreshold": 0.7,
+      "layerScores": {},
+      "featureReviews": [],
+      "action": "refine-code",
+      "summary": "Neutral silhouette is a feline volume but body and tail are overextended versus reference; paws are too far forward. Ear roots remain embedded at least13.97mm.",
+      "matched": [],
+      "mismatches": [
+        "Long torso",
+        "tail higher than ears",
+        "narrow foot silhouette",
+        "review framing differs from source"
+      ],
+      "specFixes": [],
+      "codeFixes": [
+        "Compress torso depth and resting paw reach",
+        "lower tail curl",
+        "recapture fixed and orbit views"
+      ],
+      "evidence": [],
+      "mapStrippedRender": "progress/cat-reference/captures/blockout-hero-v1.jpg",
+      "visualEvidence": {
+        "referenceScreenshot": "progress/cat-reference/user-cat-reference.png",
+        "renderScreenshot": "progress/cat-reference/captures/blockout-hero-v1.jpg",
+        "comparisonImage": "progress/cat-reference/comparison-blockout-v1.png",
+        "cameraView": "",
+        "notes": "",
+        "aiVisionNotes": ""
+      }
+    },
+    {
+      "timestamp": "2026-10-01T12:07:19.152362+00:00",
+      "passId": "blockout",
+      "estimatedFidelity": 0.45,
+      "aiVisionScore": null,
+      "visualAcceptanceThreshold": 0.7,
+      "layerScores": {},
+      "featureReviews": [],
+      "action": "request-input",
+      "summary": "UNAPPROVED: user rejected long-limb v2. Source was rebuilt with true .185m kitten links, permanently closed eyes and coherent home body/head orientation. A shorter-link WebGL v3 frame exists, but final-source multi-angle/motion render evidence is missing after renderer/CDP stalls. Do not advance visual gates or claim approved cute/AAA/parity.",
+      "matched": [],
+      "mismatches": [
+        "Reference rest likeness unapproved",
+        "final orientation not freshly captured",
+        "no final walk/jump/rear batch",
+        "rigid tail socket rather than full tail chain"
+      ],
+      "specFixes": [],
+      "codeFixes": [],
+      "evidence": [],
+      "visualEvidence": {
+        "referenceScreenshot": "progress/cat-reference/user-cat-reference.png",
+        "renderScreenshot": "progress/cat-reference/captures/compact-kitten-v3-webgl.jpg",
+        "comparisonImage": "",
+        "cameraView": "",
+        "notes": "",
+        "aiVisionNotes": ""
+      }
+    },
+    {
+      "timestamp": "2026-10-01T12:50:16.977161+00:00",
+      "passId": "blockout",
+      "action": "refine-spec",
+      "estimatedFidelity": 0.45,
+      "aiVisionScore": null,
+      "summary": "New human rejection plus recovered native Chrome WebGL2 render: fix domed head/muzzle lobes, projecting paddle paws, narrow ears and self-overlapping tail. One bounded silhouette correction, no acceptance claim.",
+      "visualEvidence": {
+        "referenceScreenshot": "progress/cat-reference/user-cat-reference.png",
+        "renderScreenshot": "progress/captures/native-2026-10-01T12-47-39-988Z-cat-study-hero-rest-.png"
+      },
+      "evidence": [
+        "progress/cat-reference/revision-v5-plan.md"
+      ]
+    }
+  ],
+  "lodPlan": [
+    {
+      "tier": "near",
+      "distance": 0,
+      "strategy": "full component tree and material layers"
+    },
+    {
+      "tier": "far",
+      "distance": 30,
+      "strategy": "merge static components and reduce local feature geometry"
+    }
+  ],
+  "performanceBudget": {
+    "qualityPriority": "reference-fidelity",
+    "targetTriangles": 100000,
+    "maxDrawCalls": 160,
+    "textureSize": 2048,
+    "fpsTarget": 30,
+    "optimizationPolicy": "Reach accepted visual fidelity first, then optimize without removing reference-critical geometry or surface layers."
+  },
+  "lightingFromPhoto": [
+    "Soft neutral key from upper front left, broad fill, real scene directional light; source painted shadow is not baked albedo.",
+    "Warm broad fill at 25% key with cool weak environment/rim; no emissive cat material.",
+    "ACES tone mapping exposure 1.0, off-white background, low-contrast ground contact shadow; neutral and grazing captures separate."
+  ],
+  "proceduralStrategy": [
+    "Block out macro silhouette first.",
+    "Add component hierarchy and joints.",
+    "Create stable pivot groups, sockets, collider proxies, and destruction metadata before visual polish.",
+    "Refine forms with bevels, tapers, bends, and procedural noise.",
+    "Run reference PBR extraction for important source-image materials and stop when confidence is below the target threshold.",
+    "Add material variation before adding expensive micro-geometry."
+  ],
+  "animationAnchors": [
+    "root pivot node supports whole-object translation, rotation, scale, and visibility changes",
+    "component pivot groups support later local transforms without rebuilding geometry"
+  ],
+  "destructionAnchors": [
+    "actionProfile.destruction.fractureGroup marks detachable or breakable component sets",
+    "component seams and sockets define plausible break points instead of random explosions"
+  ],
+  "risks": [],
+  "localSpecSearch": {
+    "collection": "core_3d",
+    "query": "Cream Chibi Window Cat quadruped feline four leg ground contact skeletal inverse kinematics chibi creature smooth implicit head attached ears curled tail",
+    "index": {
+      "status": "hit",
+      "reason": "current",
+      "fingerprint": "6857e5ab528b42ac12f4f411f862610a0bffce8e47aee3610a7603c318072fe8"
+    },
+    "matches": [
+      {
+        "record_id": "core.attachment-contract",
+        "file_path": "grimoire/readiness/joint_attachment.md",
+        "heading": "Attachment Contract",
+        "key_path": null,
+        "score": 8.391988585851,
+        "snippets": [
+          "An attached child records its parent, parent socket, local start and end, contact type, and embed depth or overlap where applicable."
+        ],
+        "source_refs": [
+          {
+            "path": "grimoire/readiness/joint_attachment.md",
+            "heading": "Attachment Contract",
+            "key_path": null
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "grimoire/readiness/joint_attachment.md"
+          },
+          {
+            "kind": "notebooklm-research",
+            "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+            "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+          }
+        ]
+      },
+      {
+        "record_id": "core.transform-local-object-space",
+        "file_path": "grimoire/intake/image_analysis.md",
+        "heading": "Layer 4 — Spatial relationships (scene-graph)",
+        "key_path": null,
+        "score": 4.292961086514,
+        "snippets": [
+          "Describe connected parts in 3D object-space using spatial predicates and a contact type rather than 2D image-space placement."
+        ],
+        "source_refs": [
+          {
+            "path": "grimoire/intake/image_analysis.md",
+            "heading": "Layer 4 — Spatial relationships (scene-graph)",
+            "key_path": null
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "grimoire/intake/image_analysis.md"
+          },
+          {
+            "kind": "notebooklm-research",
+            "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+            "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+          }
+        ]
+      },
+      {
+        "record_id": "core.shader-mapping-csg-boolean-operations-for-sub-mesh-composition",
+        "file_path": "docs/raw/img2threejs-skill-dataset.json",
+        "heading": null,
+        "key_path": "categories.rendering_shader_mapping[3]",
+        "score": 3.970370038002,
+        "snippets": [
+          "... sub-meshes procedurally instead of hand-modeling every variant. Hình học rắn cấu trúc (hợp/trừ/giao) để kết hợp hoặc cắt các sub-mesh vũ khí/dao theo thủ tục thay vì mô hình hóa thủ công từng biến thể. Recognition cues: Needed for ..."
+        ],
+        "source_refs": [
+          {
+            "path": "docs/raw/img2threejs-skill-dataset.json",
+            "heading": null,
+            "key_path": "categories.rendering_shader_mapping[3]"
+          }
+        ],
+        "evidence_refs": [
+          {
+            "kind": "source",
+            "ref": "docs/raw/img2threejs-skill-dataset.json",
+            "note": "img2threejs NotebookLM research distillation"
+          }
+        ]
+      }
+    ]
+  },
+  "pipelineRouting": {
+    "version": 1,
+    "track": "character-v1.5",
+    "source": "explicit",
+    "status": "resolved",
+    "classification": {
+      "kind": "character",
+      "confidence": 1.0,
+      "evidenceRefs": [
+        "pipeline-routing:explicit:character-v1.5"
+      ],
+      "provider": "pipeline-routing-cli",
+      "version": "1"
+    },
+    "conflicts": []
+  },
+  "rig": {
+    "enabled": true,
+    "rootBone": "CatSpine",
+    "modelSpace": true,
+    "source": "procedurally authored feline four chains; not humanoid template",
+    "bones": []
+  },
+  "tier1Results": [
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.2139,
+        "aspectRatioDelta": 0.1823,
+        "scaleDelta": 0.1994,
+        "bilateralSymmetryError": 0.2655,
+        "colorDelta": {
+          "checked": 18,
+          "maxDeltaE": 58.88,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 58.88
+            },
+            {
+              "componentId": null,
+              "deltaE": 2.63
+            },
+            {
+              "componentId": null,
+              "deltaE": 2.63
+            },
+            {
+              "componentId": null,
+              "deltaE": 2.63
+            },
+            {
+              "componentId": null,
+              "deltaE": 13.07
+            },
+            {
+              "componentId": null,
+              "deltaE": 13.07
+            },
+            {
+              "componentId": null,
+              "deltaE": 26.83
+            },
+            {
+              "componentId": null,
+              "deltaE": 26.83
+            },
+            {
+              "componentId": null,
+              "deltaE": 2.63
+            },
+            {
+              "componentId": null,
+              "deltaE": 26.57
+            },
+            {
+              "componentId": null,
+              "deltaE": 19.55
+            },
+            {
+              "componentId": null,
+              "deltaE": 19.55
+            },
+            {
+              "componentId": null,
+              "deltaE": 26.83
+            },
+            {
+              "componentId": null,
+              "deltaE": 26.83
+            },
+            {
+              "componentId": null,
+              "deltaE": 26.83
+            },
+            {
+              "componentId": null,
+              "deltaE": 2.63
+            },
+            {
+              "componentId": null,
+              "deltaE": 2.63
+            },
+            {
+              "componentId": null,
+              "deltaE": 2.63
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.214 is below threshold 0.85",
+        "aspect-ratio delta 0.182 exceeds threshold 0.05",
+        "scale delta 0.199 exceeds threshold 0.08"
+      ],
+      "maskWarnings": [],
+      "renderHash": "f4e9f92811339580",
+      "passId": "blockout",
+      "mapStrippedRender": "progress/cat-reference/captures/blockout-hero-v1.jpg"
+    },
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.1696,
+        "aspectRatioDelta": 0.0211,
+        "scaleDelta": 0.4656,
+        "bilateralSymmetryError": 0.151,
+        "colorDelta": {
+          "checked": 18,
+          "maxDeltaE": 61.72,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 61.72
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.88
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.88
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.88
+            },
+            {
+              "componentId": null,
+              "deltaE": 6.75
+            },
+            {
+              "componentId": null,
+              "deltaE": 6.75
+            },
+            {
+              "componentId": null,
+              "deltaE": 12.85
+            },
+            {
+              "componentId": null,
+              "deltaE": 12.85
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.88
+            },
+            {
+              "componentId": null,
+              "deltaE": 25.22
+            },
+            {
+              "componentId": null,
+              "deltaE": 10.85
+            },
+            {
+              "componentId": null,
+              "deltaE": 10.85
+            },
+            {
+              "componentId": null,
+              "deltaE": 12.85
+            },
+            {
+              "componentId": null,
+              "deltaE": 12.85
+            },
+            {
+              "componentId": null,
+              "deltaE": 12.85
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.88
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.88
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.88
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.170 is below threshold 0.85",
+        "scale delta 0.466 exceeds threshold 0.08",
+        "blockout requires --map-stripped-render evidence"
+      ],
+      "maskWarnings": [],
+      "renderHash": "45fc5d9a8fac0034",
+      "passId": "blockout"
+    }
+  ]
+}

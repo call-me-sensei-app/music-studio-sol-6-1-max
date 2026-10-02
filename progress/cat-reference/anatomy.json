@@ -1,0 +1,60 @@
+{
+  "sourceImage": "progress/cat-reference/user-cat-reference.png",
+  "anatomy": {
+    "applies": true,
+    "source": "manual illustration landmarks; hidden joints inferred",
+    "styleHeads": 1.47,
+    "proportions": {
+      "headUnit": 0.68,
+      "torso": 0.46,
+      "legs": 0.3,
+      "shoulderWidth": 0.95,
+      "hipWidth": 0.93
+    },
+    "pose": {
+      "type": "compressed four-paw resting feline",
+      "jointAngles": {
+        "neck": [
+          0,
+          0,
+          0
+        ],
+        "hind-knee": [
+          0,
+          0,
+          0
+        ],
+        "fore-elbow": [
+          0,
+          0,
+          0
+        ]
+      },
+      "note": "Neutral standing bind rotations are not measurements of occluded joints. Runtime IK produces resting pose."
+    },
+    "faceLandmarks": {
+      "hairline": 0,
+      "eyeLine": 0.65,
+      "eyeSpacing": 0.4,
+      "noseBase": 0.74,
+      "mouthLine": 0.78,
+      "earTop": -0.25,
+      "earBottom": 0.2
+    },
+    "features": [
+      {
+        "id": "skull-width-height",
+        "value": 1.32,
+        "evidenceRef": "manual x58..262 y81..235"
+      },
+      {
+        "id": "short-muzzle",
+        "value": 0.12,
+        "confidence": 0.55,
+        "evidenceRef": "single three-quarter profile"
+      }
+    ],
+    "confidence": 0.7,
+    "note": "Quadruped, not humanoid. HU based crown-to-chin excludes ears. Back/standing anatomy inferred."
+  }
+}
