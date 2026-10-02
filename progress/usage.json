@@ -1,12 +1,12 @@
 {
   "session_id": "01a0f634-e041-79c1-bded-7f8404205548",
-  "recorded_at": "2026-10-02T04:05:54.368Z",
+  "recorded_at": "2026-10-02T04:12:34.305Z",
   "development_time": {
     "started_at": "2026-10-01T06:44:15.563Z",
-    "as_of": "2026-10-02T04:05:54.368Z",
-    "active_seconds": 52022.247,
-    "elapsed_seconds": 76898.805,
-    "idle_seconds": 24876.55799999999,
+    "as_of": "2026-10-02T04:12:34.305Z",
+    "active_seconds": 52422.184,
+    "elapsed_seconds": 77298.742,
+    "idle_seconds": 24876.557999999997,
     "in_progress": true,
     "method": "Union of logged task_started → task_complete / turn_aborted intervals. Overlapping agents count once; waiting within an active task is included.",
     "unmatched_ends": 0,
@@ -43,8 +43,8 @@
       },
       {
         "start": "2026-10-02T03:58:03.146Z",
-        "end": "2026-10-02T04:05:54.368Z",
-        "seconds": 471.222
+        "end": "2026-10-02T04:12:34.305Z",
+        "seconds": 871.159
       }
     ]
   },
@@ -52,43 +52,43 @@
   "reasoning_effort": "max",
   "service_tier": "not recorded (user requested Standard / no Fast)",
   "tokens": {
-    "input_tokens": 150988821,
-    "cached_input_tokens": 147452800,
+    "input_tokens": 152640249,
+    "cached_input_tokens": 149098368,
     "cache_write_input_tokens": 0,
-    "output_tokens": 1116158,
-    "reasoning_output_tokens": 718388,
-    "total_tokens": 152104979
+    "output_tokens": 1120581,
+    "reasoning_output_tokens": 722277,
+    "total_tokens": 153760830
   },
   "cost_breakdown": {
-    "uncached_input_usd": 9.754736000000001,
-    "cached_input_usd": 19.941273599999995,
+    "uncached_input_usd": 9.778176000000002,
+    "cached_input_usd": 20.27038719999999,
     "cache_write_usd": 0,
-    "output_usd": 13.334969999999995
+    "output_usd": 13.401314999999995
   },
-  "api_equivalent_usd": 43.03098,
-  "usage_as_of": "2026-10-02T04:04:55.340Z",
+  "api_equivalent_usd": 43.449878,
+  "usage_as_of": "2026-10-02T04:11:51.682Z",
   "sources": [
     {
       "id": "01a0f634-e041-79c1-bded-7f8404205548",
       "name": "Main studio agent",
       "kind": "primary",
-      "usage_as_of": "2026-10-02T04:04:55.340Z",
+      "usage_as_of": "2026-10-02T04:11:51.682Z",
       "tokens": {
-        "input_tokens": 129128398,
-        "cached_input_tokens": 126259840,
+        "input_tokens": 130779826,
+        "cached_input_tokens": 127905408,
         "cache_write_input_tokens": 0,
-        "output_tokens": 1017342,
-        "reasoning_output_tokens": 666601,
-        "total_tokens": 130145740
+        "output_tokens": 1021765,
+        "reasoning_output_tokens": 670490,
+        "total_tokens": 131801591
       },
       "model": "gpt-6.1-sol",
       "reasoning_effort": "max",
-      "api_equivalent_usd": 36.562003,
+      "api_equivalent_usd": 36.98090159999999,
       "cost_breakdown": {
-        "uncached_input_usd": 7.608640000000001,
-        "cached_input_usd": 16.859007999999996,
+        "uncached_input_usd": 7.632080000000002,
+        "cached_input_usd": 17.18812159999999,
         "cache_write_usd": 0,
-        "output_usd": 12.094354999999995
+        "output_usd": 12.160699999999995
       }
     },
     {
@@ -13310,6 +13310,114 @@
       "cache_write_usd": 0,
       "output_usd": 0.0075,
       "api_equivalent_usd": 0.0437884
+    },
+    {
+      "source_id": "01a0f634-e041-79c1-bded-7f8404205548",
+      "source_name": "Main studio agent",
+      "at": "2026-10-02T04:06:02.979Z",
+      "input_tokens": 272435,
+      "cached_input_tokens": 271360,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1718,
+      "reasoning_output_tokens": 1552,
+      "total_tokens": 274153,
+      "uncached_input_tokens": 1075,
+      "context_tier": "long",
+      "uncached_input_usd": 0.0043,
+      "cached_input_usd": 0.054272,
+      "cache_write_usd": 0,
+      "output_usd": 0.02577,
+      "api_equivalent_usd": 0.084342
+    },
+    {
+      "source_id": "01a0f634-e041-79c1-bded-7f8404205548",
+      "source_name": "Main studio agent",
+      "at": "2026-10-02T04:06:26.000Z",
+      "input_tokens": 274236,
+      "cached_input_tokens": 272384,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 498,
+      "reasoning_output_tokens": 375,
+      "total_tokens": 274734,
+      "uncached_input_tokens": 1852,
+      "context_tier": "long",
+      "uncached_input_usd": 0.007408,
+      "cached_input_usd": 0.054476800000000006,
+      "cache_write_usd": 0,
+      "output_usd": 0.00747,
+      "api_equivalent_usd": 0.06935480000000001
+    },
+    {
+      "source_id": "01a0f634-e041-79c1-bded-7f8404205548",
+      "source_name": "Main studio agent",
+      "at": "2026-10-02T04:07:30.357Z",
+      "input_tokens": 274793,
+      "cached_input_tokens": 274176,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1721,
+      "reasoning_output_tokens": 1658,
+      "total_tokens": 276514,
+      "uncached_input_tokens": 617,
+      "context_tier": "long",
+      "uncached_input_usd": 0.002468,
+      "cached_input_usd": 0.05483520000000001,
+      "cache_write_usd": 0,
+      "output_usd": 0.025815,
+      "api_equivalent_usd": 0.0831182
+    },
+    {
+      "source_id": "01a0f634-e041-79c1-bded-7f8404205548",
+      "source_name": "Main studio agent",
+      "at": "2026-10-02T04:10:17.318Z",
+      "input_tokens": 276555,
+      "cached_input_tokens": 274688,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 31,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 276586,
+      "uncached_input_tokens": 1867,
+      "context_tier": "long",
+      "uncached_input_usd": 0.007468,
+      "cached_input_usd": 0.0549376,
+      "cache_write_usd": 0,
+      "output_usd": 0.000465,
+      "api_equivalent_usd": 0.0628706
+    },
+    {
+      "source_id": "01a0f634-e041-79c1-bded-7f8404205548",
+      "source_name": "Main studio agent",
+      "at": "2026-10-02T04:11:27.912Z",
+      "input_tokens": 276614,
+      "cached_input_tokens": 276480,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 78,
+      "reasoning_output_tokens": 45,
+      "total_tokens": 276692,
+      "uncached_input_tokens": 134,
+      "context_tier": "long",
+      "uncached_input_usd": 0.000536,
+      "cached_input_usd": 0.055296,
+      "cache_write_usd": 0,
+      "output_usd": 0.00117,
+      "api_equivalent_usd": 0.057002
+    },
+    {
+      "source_id": "01a0f634-e041-79c1-bded-7f8404205548",
+      "source_name": "Main studio agent",
+      "at": "2026-10-02T04:11:51.682Z",
+      "input_tokens": 276795,
+      "cached_input_tokens": 276480,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 377,
+      "reasoning_output_tokens": 259,
+      "total_tokens": 277172,
+      "uncached_input_tokens": 315,
+      "context_tier": "long",
+      "uncached_input_usd": 0.00126,
+      "cached_input_usd": 0.055296,
+      "cache_write_usd": 0,
+      "output_usd": 0.005655,
+      "api_equivalent_usd": 0.062210999999999995
     }
   ],
   "pricing_source": "https://developers.openai.com/api/docs/pricing",
