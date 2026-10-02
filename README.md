@@ -2,6 +2,8 @@
 
 An original, code-built Three.js / TSL music-room prototype. **The Ananta/AAA visual target has not been achieved or accepted.** This is a work in progress, not a finished AAA game.
 
+**Live page:** [callmesensei.app/experiments/music-studio-sol-6-1-max](https://callmesensei.app/experiments/music-studio-sol-6-1-max)
+
 ## Run
 
 ```sh
@@ -66,7 +68,7 @@ Local optional performance recording composites the native game canvas, performe
 
 Development builds also include an automatic clean native-canvas milestone recorder (first settled frame, view changes and one-minute intervals). Earlier rejected cat-study exports remain history. Current main-room WebGPU exports are also present, with audio/ensemble/tour state metadata. The capture server now permits 750 retained native frames (the earlier 200/400-frame caps had been reached); it does not overwrite older evidence. Production includes the game and phone sender entries. Native canvas frames omit the HTML HUD and do not prove camera permission, sound heard, or device pairing.
 
-`npm run usage` reads this chat’s recorded session counters. The HUD shows **active build time** (union of logged task-start/end intervals, excluding gaps), actual primary plus explicitly delegated-agent recorded tokens and a cache-aware **standard API-equivalent USD estimate**, not an invoice/subscription charge. Cached input is billed, not treated as free. Reasoning is a subset of output and is not double-charged. Per-step long-context tiers are used rather than applying a tier to cumulative usage. ImageGen reference-sheet fees are unavailable in the token logs and explicitly excluded, not assumed free. See `progress/COST.md` and `progress/usage.json`.
+`npm run usage` reads this chat’s recorded session counters. The HUD shows **active build time** (union of logged task-start/end intervals, excluding gaps), actual primary plus explicitly delegated-agent recorded tokens and a cache-aware **standard API-equivalent USD estimate**, not an invoice/subscription charge. Cached input is billed, not treated as free. Reasoning is a subset of output and is not double-charged. Per-step long-context tiers are used rather than applying a tier to cumulative usage. ImageGen reference-sheet fees are unavailable in the token logs and explicitly excluded, not assumed free. See `progress/COST.md` and `progress/usage.json`. Production builds publish that recorded snapshot (without its per-step rows) as `usage.json`, and the HUD shows it as recorded when no dev server is running.
 
 Repository: [call-me-sensei-app/music-studio-sol-6-1-max](https://github.com/call-me-sensei-app/music-studio-sol-6-1-max), published on `main`. Source snapshots, dependencies and build output remain excluded by the existing `.gitignore`; development captures, timelapses, reports and benchmark evidence are retained as project history.
 
