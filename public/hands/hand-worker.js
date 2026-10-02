@@ -1,4 +1,4 @@
-importScripts('/hands/vision_bundle.js');
+importScripts('vision_bundle.js');
 const {FilesetResolver,HandLandmarker}=self.Vision;
 let detector;
 self.onmessage=async({data})=>{

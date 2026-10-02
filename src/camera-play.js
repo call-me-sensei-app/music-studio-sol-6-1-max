@@ -27,8 +27,8 @@ export function mountCameraPlay({canvas,audio,keyboard,guitars,composer,ui,toast
   async function tracking(nextStream,generation){
     if(generation!==token){nextStream.getTracks().forEach(t=>t.stop());return;}
     stream=nextStream;video.srcObject=stream;await video.play();if(generation!==token)return;pip.hidden=!$('camera-show').checked;status('Preparing hand tracking…');
-    worker=new Worker('/hands/hand-worker.js');
-    await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Hand detector initialization timed out.')),25000);worker.onmessage=({data})=>{if(data.type==='ready'){clearTimeout(timer);resolve();}else if(data.type==='error'){clearTimeout(timer);reject(Error(data.message));}};worker.onerror=e=>{clearTimeout(timer);reject(Error(e.message));};worker.postMessage({type:'init',wasm:new URL('/hands/wasm',location.origin).href,model:new URL('/hands/hand_landmarker.task',location.origin).href});});
+    worker=new Worker(import.meta.env.BASE_URL+'hands/hand-worker.js');
+    await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Hand detector initialization timed out.')),25000);worker.onmessage=({data})=>{if(data.type==='ready'){clearTimeout(timer);resolve();}else if(data.type==='error'){clearTimeout(timer);reject(Error(data.message));}};worker.onerror=e=>{clearTimeout(timer);reject(Error(e.message));};worker.postMessage({type:'init',wasm:new URL(import.meta.env.BASE_URL+'hands/wasm',location.origin).href,model:new URL(import.meta.env.BASE_URL+'hands/hand_landmarker.task',location.origin).href});});
     if(generation!==token)return;active=true;
     worker.onmessage=({data})=>{busy=false;if(data.type==='error'){stop();status('Tracking error: '+data.message);return;}if(data.type!=='landmarks')return;lastResult=performance.now();const hands=[...data.landmarks].sort((a,b)=>b[0].x-a[0].x);drawHands(hands);interpret(hands,data.time);};
     starting=false;status('Ready · show your hands');
